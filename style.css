@@ -16,7 +16,7 @@
 }
 
 html {
-    scroll-behavior: smooth; /* Añade movimiento fluido al navegar */
+    scroll-behavior: smooth; 
 }
 
 body {
@@ -24,7 +24,7 @@ body {
     color: var(--color-text);
     background-color: var(--color-white);
     line-height: 1.6;
-    display: flex; /* Flex para separar menú y contenido principal */
+    /* Sin display: flex para que el fondo ocupe toda la pantalla y no deje bordes blancos */
 }
 
 a { text-decoration: none; color: inherit; }
@@ -70,8 +70,7 @@ ul { list-style: none; }
 
 /* --- Contenido Principal --- */
 .main-content {
-    flex: 1;
-    margin-left: 80px; /* Deja espacio para el menú izquierdo */
+    width: 100%;
     overflow-x: hidden;
 }
 
@@ -87,7 +86,7 @@ ul { list-style: none; }
     transform: translateY(0);
 }
 
-/* --- Resto del CSS original mejorado --- */
+/* --- Hero Banner (Inicio) --- */
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('./img/banner-bg.jpg'); 
@@ -98,15 +97,17 @@ ul { list-style: none; }
     justify-content: center;
     text-align: center;
     color: var(--color-white);
+    width: 100%;
 }
 
 .hero h1 { font-size: 3.5rem; margin: 1rem 0; font-weight: 700; }
 .hero h2 { font-size: 1.5rem; font-weight: 300; margin-bottom: 2rem; color: #ddd; }
 .hero-btns { display: flex; gap: 1rem; justify-content: center; }
 
+/* --- Botones --- */
 .btn {
     padding: 0.8rem 2rem;
-    border-radius: 30px; /* Bordes más redondeados para diseño moderno */
+    border-radius: 30px; 
     font-weight: 600;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -119,7 +120,9 @@ ul { list-style: none; }
 .btn-outline { border: 2px solid var(--color-white); color: var(--color-white); background: transparent; }
 .btn-outline:hover { background: var(--color-white); color: var(--color-black); transform: translateY(-3px); }
 
-.section { padding: 5rem 10%; }
+/* --- Secciones Generales --- */
+/* Padding izquierdo aumentado para que el texto no quede debajo del menú flotante en PC */
+.section { padding: 5rem 10% 5rem 120px; }
 .bg-light { background-color: var(--color-gray-light); }
 
 .section-title { font-size: 2rem; margin-bottom: 3rem; color: var(--color-coffee); position: relative; display: inline-block; }
@@ -127,23 +130,27 @@ ul { list-style: none; }
 .text-center { text-align: center; width: 100%; }
 .text-center::after { left: 25%; width: 50%; }
 
+/* --- Perfil --- */
 .profile-container { display: flex; align-items: center; gap: 4rem; flex-wrap: wrap; }
 .profile-img-box img { width: 300px; height: 300px; object-fit: cover; border-radius: 20px; box-shadow: -15px -15px 0px var(--color-coffee); transition: transform 0.3s;}
 .profile-img-box img:hover { transform: scale(1.02); }
 
 .personal-data-card { margin-top: 2rem; background: var(--color-white); padding: 1.5rem; border-left: 4px solid var(--color-coffee); border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
 
+/* --- Habilidades --- */
 .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
 .skill-card { background: var(--color-white); padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.3s; }
 .skill-card:hover { transform: translateY(-5px); }
 .skill-header { display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-weight: 600; }
 .progress-bar { width: 100%; height: 10px; background: #e0e0e0; border-radius: 5px; overflow: hidden; }
-.progress { height: 100%; background: var(--color-coffee); border-radius: 5px; width: 0; transition: width 1.5s ease-out; } /* Animación controlada por JS */
+.progress { height: 100%; background: var(--color-coffee); border-radius: 5px; width: 0; transition: width 1.5s ease-out; } 
 
+/* --- Formación --- */
 .timeline-item { border-left: 2px solid var(--color-coffee); padding-left: 20px; margin-bottom: 2rem; position: relative; }
 .timeline-item::before { content: ''; width: 14px; height: 14px; background: var(--color-coffee); border-radius: 50%; position: absolute; left: -8px; top: 5px; box-shadow: 0 0 0 3px var(--color-gray-light); }
 .date { font-size: 0.9rem; color: #666; font-weight: bold; }
 
+/* --- Proyectos (Grid) --- */
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
 .project-card { background: var(--color-white); border-radius: 12px; overflow: hidden; cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: all 0.3s; }
 .project-card:hover { transform: translateY(-10px); box-shadow: 0 15px 25px rgba(0,0,0,0.15); }
@@ -154,13 +161,123 @@ ul { list-style: none; }
 .project-card:hover .overlay { opacity: 1; }
 .project-info { padding: 1.5rem; text-align: center; }
 
-.modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); align-items: center; justify-content: center; backdrop-filter: blur(5px); }
-.modal-content { background-color: var(--color-white); padding: 2.5rem; border-radius: 15px; width: 90%; max-width: 600px; position: relative; animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-@keyframes popIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-.close-btn { position: absolute; top: 15px; right: 25px; font-size: 2.5rem; cursor: pointer; color: #aaa; transition: color 0.3s; }
-.close-btn:hover { color: var(--color-coffee); }
-.modal-img { width: 100%; height: auto; border-radius: 8px; margin: 1rem 0; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+/* ================= MODALES MEJORADOS (Pop-ups) ================= */
+.modal { 
+    display: none; 
+    position: fixed; 
+    z-index: 2000; 
+    left: 0; top: 0; 
+    width: 100%; height: 100%; 
+    background-color: rgba(0,0,0,0.8); 
+    align-items: center; 
+    justify-content: center; 
+    backdrop-filter: blur(5px); 
+}
 
+.modal-content {
+    background-color: var(--color-white);
+    padding: 2.5rem;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 700px; 
+    max-height: 90vh; 
+    overflow-y: auto; 
+    position: relative;
+    animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Scrollbar interno del modal */
+.modal-content::-webkit-scrollbar { width: 8px; }
+.modal-content::-webkit-scrollbar-thumb { background-color: var(--color-coffee); border-radius: 10px; }
+
+@keyframes popIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+.close-btn { 
+    position: absolute; 
+    top: 15px; right: 25px; 
+    font-size: 2.5rem; 
+    cursor: pointer; 
+    color: #aaa; 
+    transition: color 0.3s; 
+}
+.close-btn:hover { color: var(--color-coffee); }
+
+.modal-content h2 {
+    color: var(--color-coffee-dark);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    padding-right: 30px; 
+}
+
+/* Galería de imágenes dentro del modal */
+.modal-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 2rem;
+}
+
+.modal-img-main {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.modal-img-row {
+    display: flex;
+    gap: 15px;
+}
+
+.modal-img-row img {
+    width: calc(50% - 7.5px); 
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.modal-img-row img:hover { transform: scale(1.05); }
+
+/* Textos dentro del modal */
+.modal-details h3 {
+    color: var(--color-coffee);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--color-gray-light);
+    padding-bottom: 5px;
+}
+
+.modal-details p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* Etiquetas de Tecnologías (Tags) */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.tech-tags span {
+    background-color: var(--color-gray-light);
+    color: var(--color-coffee-dark);
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid #ddd;
+}
+
+/* --- Contacto --- */
 .contact-section { background-color: var(--color-black); color: var(--color-white); }
 .text-white { color: var(--color-white); }
 .contact-wrapper { display: flex; flex-wrap: wrap; gap: 3rem; justify-content: center; }
@@ -173,14 +290,28 @@ ul { list-style: none; }
 .contact-form input::placeholder, .contact-form textarea::placeholder { color: #ccc; }
 .contact-form button { border: none; margin-top: 1rem; }
 
-footer { text-align: center; padding: 2rem; background: #0a0a0a; color: #777; font-size: 0.9rem; margin-left: 80px; }
+/* --- Footer --- */
+footer { text-align: center; padding: 2rem; background: #0a0a0a; color: #777; font-size: 0.9rem; }
 
-/* Responsive para que el menú no estorbe en celulares */
+/* --- Responsive (Celulares y Tablets) --- */
 @media (max-width: 768px) {
-    body { flex-direction: column; }
-    .main-content { margin-left: 0; }
-    footer { margin-left: 0; }
-    .floating-menu { top: auto; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; border-radius: 15px; padding: 0.8rem; flex-direction: row; }
+    /* Mueve el menú a la parte inferior en celulares para que no estorbe */
+    .floating-menu { 
+        top: auto; 
+        bottom: 20px; 
+        left: 50%; 
+        transform: translateX(-50%); 
+        width: 90%; 
+        border-radius: 15px; 
+        padding: 0.8rem; 
+        flex-direction: row; 
+    }
     .nav-links { flex-direction: row; justify-content: space-around; gap: 0; width: 100%; }
-    .section { padding: 4rem 5%; }
+    
+    /* Reajuste de márgenes para la vista móvil */
+    .section { padding: 4rem 5% 7rem 5%; } 
+    
+    /* Ajustes para las fotos del modal en móviles */
+    .modal-img-row { flex-direction: column; gap: 10px; }
+    .modal-img-row img { width: 100%; height: auto; }
 }

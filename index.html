@@ -1,227 +1,508 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portafolio Profesional | Kevin Mujica</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <nav class="floating-menu">
-        <ul class="nav-links">
-            <li><a href="#inicio" title="Inicio"><i class="fas fa-home"></i></a></li>
-            <li><a href="#perfil" title="Perfil"><i class="fas fa-user"></i></a></li>
-            <li><a href="#skills" title="Habilidades"><i class="fas fa-laptop-code"></i></a></li>
-            <li><a href="#formacion" title="Formación"><i class="fas fa-graduation-cap"></i></a></li>
-            <li><a href="#proyectos" title="Proyectos"><i class="fas fa-project-diagram"></i></a></li>
-            <li><a href="#contacto" title="Contacto"><i class="fas fa-envelope"></i></a></li>
-        </ul>
+      <ul class="nav-links">
+        <li>
+          <a href="#inicio" title="Inicio"><i class="fas fa-home"></i></a>
+        </li>
+        <li>
+          <a href="#perfil" title="Perfil"><i class="fas fa-user"></i></a>
+        </li>
+        <li>
+          <a href="#skills" title="Habilidades"
+            ><i class="fas fa-laptop-code"></i
+          ></a>
+        </li>
+        <li>
+          <a href="#formacion" title="Formación"
+            ><i class="fas fa-graduation-cap"></i
+          ></a>
+        </li>
+        <li>
+          <a href="#proyectos" title="Proyectos"
+            ><i class="fas fa-project-diagram"></i
+          ></a>
+        </li>
+        <li>
+          <a href="#contacto" title="Contacto"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </li>
+      </ul>
     </nav>
 
     <main class="main-content">
-        <header id="inicio" class="hero hidden">
-            <div class="hero-content">
-                <p class="greeting">Hola, soy</p>
-                <h1>Kevin Alexis Mujica Laime</h1>
-                <h2>Ingeniería de Sistemas | Desarrollador Web & Microcontroladores</h2>
-                <div class="hero-btns">
-                    <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
-                    <a href="#contacto" class="btn btn-outline">Contáctame</a>
-                </div>
-            </div>
-        </header>
-
-        <section id="perfil" class="section profile-section">
-            <div class="container profile-container hidden">
-                <div class="profile-img-box">
-                    <img src="./img/perfil.jpg" alt="Foto de Perfil" class="profile-img">
-                </div>
-                <div class="profile-info">
-                    <h3 class="section-title">Perfil Profesional</h3>
-                    <p class="profile-text">
-                        Estudiante de Ingeniería de Sistemas apasionado por el desarrollo de software, la arquitectura web y la integración de hardware. Me enfoco en crear soluciones digitales eficientes, escalables y en explorar la robótica. Busco aplicar mis conocimientos en entornos dinámicos y seguir aprendiendo nuevas tecnologías.
-                    </p>
-                    
-                    <div class="personal-data-card">
-                        <h4>Datos Personales</h4>
-                        <ul>
-                            <li><strong>Ubicación:</strong> La Paz, Bolivia</li>
-                            <li><strong>Estado:</strong> Estudiante Activo</li>
-                            <li><strong>Intereses:</strong> Desarrollo Web, Python, Robótica, Pixel Art</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="skills" class="section bg-light">
-            <div class="container hidden">
-                <h3 class="section-title text-center">Habilidades Técnicas</h3>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <div class="skill-header">
-                            <span>Laravel / PHP</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" data-width="85%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-header">
-                            <span>Python</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" data-width="80%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-header">
-                            <span>Base de Datos (PostgreSQL / MySQL)</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" data-width="90%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-header">
-                            <span>Microcontroladores (ESP32 / PIC)</span>
-                            <span>75%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" data-width="75%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="formacion" class="section">
-            <div class="container hidden">
-                <h3 class="section-title text-center">Formación y Experiencia</h3>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <span class="date">Noviembre 2025</span>
-                        <h4>Organizador GDG La Paz DevFest</h4>
-                        <p>Google Developer Groups - Gestión de eventos tecnológicos y promoción comunitaria.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="date">2023 - Presente</span>
-                        <h4>Ingeniería de Sistemas</h4>
-                        <p>Estudios universitarios en curso.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="proyectos" class="section bg-light">
-            <div class="container hidden">
-                <h3 class="section-title text-center">Proyectos Destacados</h3>
-                <div class="projects-grid">
-                    <div class="project-card" onclick="openModal('modal1')">
-                        <div class="project-img-wrapper">
-                            <img src="./img/proyecto1.jpg" alt="Migración de Base de Datos">
-                            <div class="overlay"><i class="fas fa-search-plus"></i></div>
-                        </div>
-                        <div class="project-info">
-                            <h4>Sistema Web en Laravel</h4>
-                            <p>Desarrollo y Migración a PostgreSQL</p>
-                        </div>
-                    </div>
-
-                    <div class="project-card" onclick="openModal('modal2')">
-                        <div class="project-img-wrapper">
-                            <img src="./img/proyecto2.jpg" alt="Proyecto Robótica">
-                            <div class="overlay"><i class="fas fa-search-plus"></i></div>
-                        </div>
-                        <div class="project-info">
-                            <h4>Controlador de Dron</h4>
-                            <p>Robótica con ESP32</p>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card" onclick="openModal('modal3')">
-                        <div class="project-img-wrapper">
-                            <img src="./img/proyecto3.jpg" alt="Proyecto de Arte">
-                            <div class="overlay"><i class="fas fa-search-plus"></i></div>
-                        </div>
-                        <div class="project-info">
-                            <h4>Generación de Assets</h4>
-                            <p>Pixel Art Scripting en Python</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div id="modal1" class="modal">
-            <div class="modal-content">
-                <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
-                <h2>Sistema Web en Laravel</h2>
-                <img src="./img/proyecto1.jpg" alt="Detalle Proyecto 1" class="modal-img">
-                <p><strong>Descripción:</strong> Plataforma web con migración exitosa de base de datos desde MySQL a PostgreSQL, implementando buenas prácticas con Composer y Git.</p>
-                <p><strong>Tecnologías:</strong> Laravel, PostgreSQL, Git.</p>
-            </div>
+      <header id="inicio" class="hero hidden">
+        <div class="hero-content">
+          <p class="greeting">Hola, soy</p>
+          <h1>Kevin Alexis Mujica Laime</h1>
+          <h2>
+            Ingeniería de Sistemas | Desarrollador Web & Microcontroladores
+          </h2>
+          <div class="hero-btns">
+            <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
+            <a href="#contacto" class="btn btn-outline">Contáctame</a>
+          </div>
         </div>
+      </header>
 
-        <div id="modal2" class="modal">
-            <div class="modal-content">
-                <span class="close-btn" onclick="closeModal('modal2')">&times;</span>
-                <h2>Controlador de Dron</h2>
-                <img src="./img/proyecto2.jpg" alt="Detalle Proyecto 2" class="modal-img">
-                <p><strong>Descripción:</strong> Diseño de circuitos y programación de microcontroladores para el vuelo y estabilización de un dron.</p>
-                <p><strong>Tecnologías:</strong> ESP32, C/C++, Diseño de Circuitos.</p>
+      <section id="perfil" class="section profile-section">
+        <div class="container profile-container hidden">
+          <div class="profile-img-box">
+            <img
+              src="./img/alexfoto.jpeg"
+              alt="Foto de Perfil"
+              class="profile-img"
+            />
+          </div>
+          <div class="profile-info">
+            <h3 class="section-title">Perfil Profesional</h3>
+            <p class="profile-text">
+              Estudiante de Ingeniería de Sistemas apasionado por el desarrollo
+              de software, la arquitectura web y la integración de hardware. Me
+              enfoco en crear soluciones digitales eficientes, escalables y en
+              explorar la robótica. Busco aplicar mis conocimientos en entornos
+              dinámicos y seguir aprendiendo nuevas tecnologías.
+            </p>
+
+            <div class="personal-data-card">
+              <h4>Datos Personales</h4>
+              <ul>
+                <li><strong>Ubicación:</strong> La Paz, Bolivia</li>
+                <li><strong>Estado:</strong> Estudiante Activo</li>
+                <li>
+                  <strong>Intereses:</strong> Desarrollo Web, Python, Robótica,
+                  Pixel Art
+                </li>
+              </ul>
             </div>
+          </div>
         </div>
+      </section>
 
-        <div id="modal3" class="modal">
-            <div class="modal-content">
-                <span class="close-btn" onclick="closeModal('modal3')">&times;</span>
-                <h2>Generación de Assets</h2>
-                <img src="./img/proyecto3.jpg" alt="Detalle Proyecto 3" class="modal-img">
-                <p><strong>Descripción:</strong> Automatización y creación de assets visuales en formato pixel art utilizando scripts.</p>
-                <p><strong>Tecnologías:</strong> Python, Generación de Imágenes.</p>
+      <section id="skills" class="section bg-light">
+        <div class="container hidden">
+          <h3 class="section-title text-center">Habilidades Técnicas</h3>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <div class="skill-header">
+                <span>Laravel / PHP</span>
+                <span>85%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" data-width="85%"></div>
+              </div>
             </div>
+            <div class="skill-card">
+              <div class="skill-header">
+                <span>Python</span>
+                <span>80%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" data-width="80%"></div>
+              </div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-header">
+                <span>Base de Datos (PostgreSQL / MySQL)</span>
+                <span>90%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" data-width="90%"></div>
+              </div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-header">
+                <span>Microcontroladores (ESP32 / PIC)</span>
+                <span>75%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress" data-width="75%"></div>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <section id="contacto" class="section contact-section">
-            <div class="container hidden">
-                <h3 class="section-title text-center text-white">Contáctame</h3>
-                <div class="contact-wrapper">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>tu_correo@email.com</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fab fa-linkedin"></i>
-                            <a href="#">linkedin.com/in/tu-perfil</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fab fa-github"></i>
-                            <a href="#">github.com/tu-usuario</a>
-                        </div>
-                    </div>
-
-                    <form class="contact-form" action="mailto:tu_correo@email.com" method="post" enctype="text/plain">
-                        <input type="text" name="nombre" placeholder="Tu Nombre" required>
-                        <input type="email" name="email" placeholder="Tu Correo" required>
-                        <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
-                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
-                    </form>
-                </div>
+      <section id="formacion" class="section">
+        <div class="container hidden">
+          <h3 class="section-title text-center">Formación y Experiencia</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="date">Noviembre 2025</span>
+              <h4>Organizador GDG La Paz DevFest</h4>
+              <p>
+                Google Developer Groups - Gestión de eventos tecnológicos y
+                promoción comunitaria.
+              </p>
             </div>
-        </section>
+            <div class="timeline-item">
+              <span class="date">2023 - Presente</span>
+              <h4>Ingeniería de Sistemas</h4>
+              <p>Estudios universitarios en curso.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <footer>
-            <p>&copy; 2024 Kevin Mujica. Todos los derechos reservados.</p>
-        </footer>
+      <section id="proyectos" class="section bg-light">
+        <div class="container hidden">
+          <h3 class="section-title text-center">Proyectos Destacados</h3>
+          <div class="projects-grid">
+            <div class="project-card" onclick="openModal('modal1')">
+              <div class="project-img-wrapper">
+                <img
+                  src="./img/proyecto1.jpg"
+                  alt="Migración de Base de Datos"
+                />
+                <div class="overlay"><i class="fas fa-search-plus"></i></div>
+              </div>
+              <div class="project-info">
+                <h4>Sistema Web en Laravel</h4>
+                <p>Desarrollo y Migración a PostgreSQL</p>
+              </div>
+            </div>
+
+            <div class="project-card" onclick="openModal('modal2')">
+              <div class="project-img-wrapper">
+                <img src="./img/proyecto2.jpg" alt="Proyecto Robótica" />
+                <div class="overlay"><i class="fas fa-search-plus"></i></div>
+              </div>
+              <div class="project-info">
+                <h4>Controlador de Dron</h4>
+                <p>Robótica con ESP32</p>
+              </div>
+            </div>
+
+            <div class="project-card" onclick="openModal('modal3')">
+              <div class="project-img-wrapper">
+                <img src="./img/proyecto3.jpg" alt="Proyecto de Arte" />
+                <div class="overlay"><i class="fas fa-search-plus"></i></div>
+              </div>
+              <div class="project-info">
+                <h4>Generación de Assets</h4>
+                <p>Pixel Art Scripting en Python</p>
+              </div>
+            </div>
+
+            <div class="project-card" onclick="openModal('modal4')">
+              <div class="project-img-wrapper">
+                <img src="./img/proyecto4.jpg" alt="Proyecto Gestión" />
+                <div class="overlay"><i class="fas fa-search-plus"></i></div>
+              </div>
+              <div class="project-info">
+                <h4>Sistema de Gestión de Ventas</h4>
+                <p>Aplicación de Escritorio Java</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
+          <h2>Sistema Web en Laravel</h2>
+
+          <div class="modal-gallery">
+            <img
+              src="./img/proyecto1.jpg"
+              alt="Captura Principal 1"
+              class="modal-img-main"
+            />
+            <div class="modal-img-row">
+              <img src="./img/proyecto1_2.jpg" alt="Captura Secundaria 1" />
+              <img src="./img/proyecto1_3.jpg" alt="Captura Secundaria 2" />
+            </div>
+          </div>
+
+          <div class="modal-details">
+            <h3>Descripción Breve</h3>
+            <p>
+              Plataforma web con migración exitosa de base de datos desde MySQL
+              a PostgreSQL, implementando buenas prácticas de control de
+              versiones.
+            </p>
+
+            <h3>Especificación Detallada</h3>
+            <p>
+              El sistema cuenta con un panel administrativo completo,
+              autenticación de usuarios basada en roles y generación de reportes
+              dinámicos. Durante el desarrollo, se resolvió una migración
+              crítica de motor de base de datos optimizando las consultas
+              Eloquent, y se gestionaron las dependencias eficientemente
+              mediante Composer y Git para el despliegue a producción.
+            </p>
+
+            <h3>Tecnologías Usadas</h3>
+            <div class="tech-tags">
+              <span>Laravel</span>
+              <span>PHP</span>
+              <span>PostgreSQL</span>
+              <span>Git</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal2" class="modal">
+        <div class="modal-content">
+          <span class="close-btn" onclick="closeModal('modal2')">&times;</span>
+          <h2>Controlador de Dron con ESP32</h2>
+
+          <div class="modal-gallery">
+            <img
+              src="./img/proyecto2.jpg"
+              alt="Captura Principal 2"
+              class="modal-img-main"
+            />
+            <div class="modal-img-row">
+              <img src="./img/proyecto2_2.jpg" alt="Captura Secundaria 1" />
+              <img src="./img/proyecto2_3.jpg" alt="Captura Secundaria 2" />
+            </div>
+          </div>
+
+          <div class="modal-details">
+            <h3>Descripción Breve</h3>
+            <p>
+              Diseño de circuitos y programación de microcontroladores para el
+              control de vuelo y estabilización de un vehículo aéreo no
+              tripulado (Dron).
+            </p>
+
+            <h3>Especificación Detallada</h3>
+            <p>
+              Integración de módulos giroscópicos y acelerómetros para la
+              lectura de datos en tiempo real. Se programó un filtro PID
+              (Proporcional, Integral, Derivativo) en C++ para estabilizar el
+              vuelo ajustando la velocidad de los 4 motores de forma
+              independiente. El circuito fue diseñado para ser liviano
+              utilizando un ESP32 como procesador principal debido a su doble
+              núcleo y bajo consumo.
+            </p>
+
+            <h3>Tecnologías Usadas</h3>
+            <div class="tech-tags">
+              <span>C++</span>
+              <span>ESP32 / PIC</span>
+              <span>Electrónica</span>
+              <span>PID Control</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal3" class="modal">
+        <div class="modal-content">
+          <span class="close-btn" onclick="closeModal('modal3')">&times;</span>
+          <h2>Generador de Assets (Pixel Art)</h2>
+
+          <div class="modal-gallery">
+            <img
+              src="./img/proyecto3.jpg"
+              alt="Captura Principal 3"
+              class="modal-img-main"
+            />
+            <div class="modal-img-row">
+              <img src="./img/proyecto3_2.jpg" alt="Captura Secundaria 1" />
+              <img src="./img/proyecto3_3.jpg" alt="Captura Secundaria 2" />
+            </div>
+          </div>
+
+          <div class="modal-details">
+            <h3>Descripción Breve</h3>
+            <p>
+              Script de automatización para la creación y modificación por lotes
+              de assets visuales en formato pixel art para videojuegos.
+            </p>
+
+            <h3>Especificación Detallada</h3>
+            <p>
+              Se desarrolló un conjunto de scripts utilizando Python y la
+              librería Pillow (PIL) para procesar directorios completos de
+              imágenes. El programa permite reescalar sin pérdida de nitidez
+              (Nearest Neighbor), aplicar paletas de colores específicas de
+              forma automática y generar "spritesheets" a partir de imágenes
+              individuales, reduciendo el tiempo de trabajo del artista en un
+              80%.
+            </p>
+
+            <h3>Tecnologías Usadas</h3>
+            <div class="tech-tags">
+              <span>Python</span>
+              <span>Pillow (PIL)</span>
+              <span>Automatización</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal4" class="modal">
+        <div class="modal-content">
+          <span class="close-btn" onclick="closeModal('modal4')">&times;</span>
+          <h2>Sistema de Gestión de Ventas</h2>
+
+          <div class="modal-gallery">
+            <img
+              src="./img/proyecto4.jpg"
+              alt="Captura Principal 4"
+              class="modal-img-main"
+            />
+            <div class="modal-img-row">
+              <img src="./img/proyecto4_2.jpg" alt="Captura Secundaria 1" />
+              <img src="./img/proyecto4_3.jpg" alt="Captura Secundaria 2" />
+            </div>
+          </div>
+
+          <div class="modal-details">
+            <h3>Descripción Breve</h3>
+            <p>
+              Aplicación de escritorio desarrollada en Java para el control de
+              inventarios, facturación y clientes de una PYME.
+            </p>
+
+            <h3>Especificación Detallada</h3>
+            <p>
+              Software construido con arquitectura Modelo-Vista-Controlador
+              (MVC). Incluye un módulo de punto de venta (POS) rápido, alertas
+              de stock mínimo y exportación de tickets de compra. La interfaz
+              gráfica fue construida con Java Swing garantizando una experiencia
+              de usuario intuitiva, conectada a una base de datos relacional
+              para la persistencia de datos segura y concurrente.
+            </p>
+
+            <h3>Tecnologías Usadas</h3>
+            <div class="tech-tags">
+              <span>Java</span>
+              <span>MySQL / JDBC</span>
+              <span>Java Swing</span>
+              <span>POO</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
+          <h2>Sistema Web en Laravel</h2>
+          <img
+            src="./img/proyecto1.jpg"
+            alt="Detalle Proyecto 1"
+            class="modal-img"
+          />
+          <p>
+            <strong>Descripción:</strong> Plataforma web con migración exitosa
+            de base de datos desde MySQL a PostgreSQL, implementando buenas
+            prácticas con Composer y Git.
+          </p>
+          <p><strong>Tecnologías:</strong> Laravel, PostgreSQL, Git.</p>
+        </div>
+      </div>
+
+      <div id="modal2" class="modal">
+        <div class="modal-content">
+          <span class="close-btn" onclick="closeModal('modal2')">&times;</span>
+          <h2>Controlador de Dron</h2>
+          <img
+            src="./img/proyecto2.jpg"
+            alt="Detalle Proyecto 2"
+            class="modal-img"
+          />
+          <p>
+            <strong>Descripción:</strong> Diseño de circuitos y programación de
+            microcontroladores para el vuelo y estabilización de un dron.
+          </p>
+          <p>
+            <strong>Tecnologías:</strong> ESP32, C/C++, Diseño de Circuitos.
+          </p>
+        </div>
+      </div>
+
+      <div id="modal3" class="modal">
+        <div class="modal-content">
+          <span class="close-btn" onclick="closeModal('modal3')">&times;</span>
+          <h2>Generación de Assets</h2>
+          <img
+            src="./img/proyecto3.jpg"
+            alt="Detalle Proyecto 3"
+            class="modal-img"
+          />
+          <p>
+            <strong>Descripción:</strong> Automatización y creación de assets
+            visuales en formato pixel art utilizando scripts.
+          </p>
+          <p><strong>Tecnologías:</strong> Python, Generación de Imágenes.</p>
+        </div>
+      </div>
+
+      <section id="contacto" class="section contact-section">
+        <div class="container hidden">
+          <h3 class="section-title text-center text-white">Contáctame</h3>
+          <div class="contact-wrapper">
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>tu_correo@email.com</span>
+              </div>
+              <div class="contact-item">
+                <i class="fab fa-linkedin"></i>
+                <a href="#">linkedin.com/in/tu-perfil</a>
+              </div>
+              <div class="contact-item">
+                <i class="fab fa-github"></i>
+                <a href="#">github.com/tu-usuario</a>
+              </div>
+            </div>
+
+            <form
+              class="contact-form"
+              action="mailto:tu_correo@email.com"
+              method="post"
+              enctype="text/plain"
+            >
+              <input
+                type="text"
+                name="nombre"
+                placeholder="Tu Nombre"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Tu Correo"
+                required
+              />
+              <textarea
+                name="mensaje"
+                rows="5"
+                placeholder="Escribe tu mensaje aquí..."
+                required
+              ></textarea>
+              <button type="submit" class="btn btn-primary">
+                Enviar Mensaje
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <p>&copy; 2024 Kevin Mujica. Todos los derechos reservados.</p>
+      </footer>
     </main>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
