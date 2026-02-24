@@ -24,7 +24,6 @@ body {
     color: var(--color-text);
     background-color: var(--color-white);
     line-height: 1.6;
-    /* Sin display: flex para que el fondo ocupe toda la pantalla y no deje bordes blancos */
 }
 
 a { text-decoration: none; color: inherit; }
@@ -137,13 +136,44 @@ ul { list-style: none; }
 
 .personal-data-card { margin-top: 2rem; background: var(--color-white); padding: 1.5rem; border-left: 4px solid var(--color-coffee); border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
 
-/* --- Habilidades --- */
-.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-.skill-card { background: var(--color-white); padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.3s; }
-.skill-card:hover { transform: translateY(-5px); }
-.skill-header { display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-weight: 600; }
-.progress-bar { width: 100%; height: 10px; background: #e0e0e0; border-radius: 5px; overflow: hidden; }
-.progress { height: 100%; background: var(--color-coffee); border-radius: 5px; width: 0; transition: width 1.5s ease-out; } 
+/* --- Habilidades (Skills Agrupadas - Diseño Limpio) --- */
+.skills-header { margin-bottom: 4rem; }
+.skills-subtitle { color: #666; font-size: 1.1rem; margin-top: -1.5rem; }
+
+.skills-list-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+    gap: 2.5rem 4rem; 
+}
+
+.skill-item { width: 100%; }
+
+.skill-header { 
+    display: flex; 
+    justify-content: space-between; 
+    margin-bottom: 0.8rem; 
+    font-weight: 600; 
+    font-size: 0.85rem;
+    color: var(--color-text);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.progress-bar { 
+    width: 100%; 
+    height: 10px; 
+    background: #e0e0e0; 
+    border-radius: 2px; 
+    overflow: hidden; 
+}
+
+.progress { 
+    height: 100%; 
+    background: var(--color-coffee); 
+    border-radius: 2px; 
+    width: 0; 
+    transition: width 1.5s cubic-bezier(0.25, 0.8, 0.25, 1); 
+}
 
 /* --- Formación --- */
 .timeline-item { border-left: 2px solid var(--color-coffee); padding-left: 20px; margin-bottom: 2rem; position: relative; }
@@ -314,4 +344,7 @@ footer { text-align: center; padding: 2rem; background: #0a0a0a; color: #777; fo
     /* Ajustes para las fotos del modal en móviles */
     .modal-img-row { flex-direction: column; gap: 10px; }
     .modal-img-row img { width: 100%; height: auto; }
+
+    /* Ajuste para los skills en móviles (una columna en vez de dos) */
+    .skills-list-grid { grid-template-columns: 1fr; }
 }
