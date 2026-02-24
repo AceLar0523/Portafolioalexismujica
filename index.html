@@ -58,34 +58,87 @@
       </header>
 
       <section id="perfil" class="section profile-section">
-        <div class="container profile-container hidden">
-          <div class="profile-img-box">
-            <img
-              src="./img/alexfoto.jpeg"
-              alt="Foto de Perfil"
-              class="profile-img"
-            />
+        <div class="container hidden">
+          <div class="skills-header text-center">
+            <h3 class="section-title">Sobre mí</h3>
           </div>
-          <div class="profile-info">
-            <h3 class="section-title">Perfil Profesional</h3>
-            <p class="profile-text">
-              Estudiante de Ingeniería de Sistemas apasionado por el desarrollo
-              de software, la arquitectura web y la integración de hardware. Me
-              enfoco en crear soluciones digitales eficientes, escalables y en
-              explorar la robótica. Busco aplicar mis conocimientos en entornos
-              dinámicos y seguir aprendiendo nuevas tecnologías.
-            </p>
 
-            <div class="personal-data-card">
-              <h4>Datos Personales</h4>
-              <ul>
-                <li><strong>Ubicación:</strong> La Paz, Bolivia</li>
-                <li><strong>Estado:</strong> Estudiante Activo</li>
+          <p class="about-intro-text text-center">
+            Estudiante de Ingeniería de Sistemas con sólida base en desarrollo
+            web, análisis de sistemas y programación de microcontroladores. He
+            desarrollado proyectos académicos e independientes enfocados en
+            aportar soluciones tecnológicas eficientes. Me caracteriza la
+            proactividad, el pensamiento analítico y la capacidad de adaptación
+            en entornos dinámicos y de aprendizaje continuo.
+          </p>
+
+          <div class="about-grid">
+            <div class="about-img-box">
+              <img
+                src="./img/perfil.png"
+                alt="Foto de Perfil Kevin Mujica"
+                class="profile-img"
+              />
+            </div>
+
+            <div class="about-details">
+              <h3 class="about-role">
+                Estudiante de Ingeniería de Sistemas & Desarrollador Web
+              </h3>
+              <p class="about-italic">
+                Apasionado por construir soluciones innovadoras, automatizar
+                procesos e integrar tecnologías de software y hardware para
+                generar un impacto real.
+              </p>
+
+              <ul class="about-info-list">
                 <li>
-                  <strong>Intereses:</strong> Desarrollo Web, Python, Robótica,
-                  Pixel Art
+                  <i class="fas fa-chevron-right"></i>
+                  <strong>Nombre:</strong> Kevin Alexis Mujica Laime
+                </li>
+                <li>
+                  <i class="fas fa-chevron-right"></i>
+                  <strong>Celular:</strong> +591 68839205
+                </li>
+                <li>
+                  <i class="fas fa-chevron-right"></i>
+                  <strong>Fecha de nacimiento:</strong> 23 de Enero de 2005
+                </li>
+                <li>
+                  <i class="fas fa-chevron-right"></i>
+                  <strong>Correo:</strong> kevinalexis01mujica@gmail.com
+                </li>
+                <li>
+                  <i class="fas fa-chevron-right"></i>
+                  <strong>CI:</strong> 9876894
+                </li>
+                <li>
+                  <i class="fas fa-chevron-right"></i>
+                  <strong>Ciudad:</strong> La Paz - Bolivia
+                </li>
+                <li>
+                  <i class="fas fa-chevron-right"></i>
+                  <strong>Domicilio:</strong> Av. Jaimes Freyre Nro. 1888
+                </li>
+                <li>
+                  <i class="fas fa-chevron-right"></i>
+                  <strong>LinkedIn:</strong>
+                  <a
+                    href="#"
+                    style="color: var(--color-coffee); font-weight: bold"
+                    >Kevin Alexis Mujica Laime</a
+                  >
                 </li>
               </ul>
+
+              <p class="about-closing-text">
+                Cuento con conocimientos sólidos en desarrollo web (PostgreSQL,
+                MySQL, Laravel), automatización con Python y programación
+                orientada a objetos (Java). Además, tengo experiencia práctica
+                en diseño de circuitos y robótica usando ESP32. Busco
+                oportunidades profesionales para implementar soluciones robustas
+                y seguir expandiendo mis habilidades tecnológicas.
+              </p>
             </div>
           </div>
         </div>
@@ -636,243 +689,6 @@
         </div>
       </div>
 
-      <div id="modal1" class="modal">
-        <div class="modal-content">
-          <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
-          <h2>Sistema Web en Laravel</h2>
-
-          <div class="modal-gallery">
-            <img
-              src="./img/proyecto1.jpg"
-              alt="Captura Principal 1"
-              class="modal-img-main"
-            />
-            <div class="modal-img-row">
-              <img src="./img/proyecto1_2.jpg" alt="Captura Secundaria 1" />
-              <img src="./img/proyecto1_3.jpg" alt="Captura Secundaria 2" />
-            </div>
-          </div>
-
-          <div class="modal-details">
-            <h3>Descripción Breve</h3>
-            <p>
-              Plataforma web con migración exitosa de base de datos desde MySQL
-              a PostgreSQL, implementando buenas prácticas de control de
-              versiones.
-            </p>
-
-            <h3>Especificación Detallada</h3>
-            <p>
-              El sistema cuenta con un panel administrativo completo,
-              autenticación de usuarios basada en roles y generación de reportes
-              dinámicos. Durante el desarrollo, se resolvió una migración
-              crítica de motor de base de datos optimizando las consultas
-              Eloquent, y se gestionaron las dependencias eficientemente
-              mediante Composer y Git para el despliegue a producción.
-            </p>
-
-            <h3>Tecnologías Usadas</h3>
-            <div class="tech-tags">
-              <span>Laravel</span>
-              <span>PHP</span>
-              <span>PostgreSQL</span>
-              <span>Git</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="modal2" class="modal">
-        <div class="modal-content">
-          <span class="close-btn" onclick="closeModal('modal2')">&times;</span>
-          <h2>Controlador de Dron con ESP32</h2>
-
-          <div class="modal-gallery">
-            <img
-              src="./img/proyecto2.jpg"
-              alt="Captura Principal 2"
-              class="modal-img-main"
-            />
-            <div class="modal-img-row">
-              <img src="./img/proyecto2_2.jpg" alt="Captura Secundaria 1" />
-              <img src="./img/proyecto2_3.jpg" alt="Captura Secundaria 2" />
-            </div>
-          </div>
-
-          <div class="modal-details">
-            <h3>Descripción Breve</h3>
-            <p>
-              Diseño de circuitos y programación de microcontroladores para el
-              control de vuelo y estabilización de un vehículo aéreo no
-              tripulado (Dron).
-            </p>
-
-            <h3>Especificación Detallada</h3>
-            <p>
-              Integración de módulos giroscópicos y acelerómetros para la
-              lectura de datos en tiempo real. Se programó un filtro PID
-              (Proporcional, Integral, Derivativo) en C++ para estabilizar el
-              vuelo ajustando la velocidad de los 4 motores de forma
-              independiente. El circuito fue diseñado para ser liviano
-              utilizando un ESP32 como procesador principal debido a su doble
-              núcleo y bajo consumo.
-            </p>
-
-            <h3>Tecnologías Usadas</h3>
-            <div class="tech-tags">
-              <span>C++</span>
-              <span>ESP32 / PIC</span>
-              <span>Electrónica</span>
-              <span>PID Control</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="modal3" class="modal">
-        <div class="modal-content">
-          <span class="close-btn" onclick="closeModal('modal3')">&times;</span>
-          <h2>Generador de Assets (Pixel Art)</h2>
-
-          <div class="modal-gallery">
-            <img
-              src="./img/proyecto3.jpg"
-              alt="Captura Principal 3"
-              class="modal-img-main"
-            />
-            <div class="modal-img-row">
-              <img src="./img/proyecto3_2.jpg" alt="Captura Secundaria 1" />
-              <img src="./img/proyecto3_3.jpg" alt="Captura Secundaria 2" />
-            </div>
-          </div>
-
-          <div class="modal-details">
-            <h3>Descripción Breve</h3>
-            <p>
-              Script de automatización para la creación y modificación por lotes
-              de assets visuales en formato pixel art para videojuegos.
-            </p>
-
-            <h3>Especificación Detallada</h3>
-            <p>
-              Se desarrolló un conjunto de scripts utilizando Python y la
-              librería Pillow (PIL) para procesar directorios completos de
-              imágenes. El programa permite reescalar sin pérdida de nitidez
-              (Nearest Neighbor), aplicar paletas de colores específicas de
-              forma automática y generar "spritesheets" a partir de imágenes
-              individuales, reduciendo el tiempo de trabajo del artista en un
-              80%.
-            </p>
-
-            <h3>Tecnologías Usadas</h3>
-            <div class="tech-tags">
-              <span>Python</span>
-              <span>Pillow (PIL)</span>
-              <span>Automatización</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="modal4" class="modal">
-        <div class="modal-content">
-          <span class="close-btn" onclick="closeModal('modal4')">&times;</span>
-          <h2>Sistema de Gestión de Ventas</h2>
-
-          <div class="modal-gallery">
-            <img
-              src="./img/proyecto4.jpg"
-              alt="Captura Principal 4"
-              class="modal-img-main"
-            />
-            <div class="modal-img-row">
-              <img src="./img/proyecto4_2.jpg" alt="Captura Secundaria 1" />
-              <img src="./img/proyecto4_3.jpg" alt="Captura Secundaria 2" />
-            </div>
-          </div>
-
-          <div class="modal-details">
-            <h3>Descripción Breve</h3>
-            <p>
-              Aplicación de escritorio desarrollada en Java para el control de
-              inventarios, facturación y clientes de una PYME.
-            </p>
-
-            <h3>Especificación Detallada</h3>
-            <p>
-              Software construido con arquitectura Modelo-Vista-Controlador
-              (MVC). Incluye un módulo de punto de venta (POS) rápido, alertas
-              de stock mínimo y exportación de tickets de compra. La interfaz
-              gráfica fue construida con Java Swing garantizando una experiencia
-              de usuario intuitiva, conectada a una base de datos relacional
-              para la persistencia de datos segura y concurrente.
-            </p>
-
-            <h3>Tecnologías Usadas</h3>
-            <div class="tech-tags">
-              <span>Java</span>
-              <span>MySQL / JDBC</span>
-              <span>Java Swing</span>
-              <span>POO</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="modal1" class="modal">
-        <div class="modal-content">
-          <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
-          <h2>Sistema Web en Laravel</h2>
-          <img
-            src="./img/proyecto1.jpg"
-            alt="Detalle Proyecto 1"
-            class="modal-img"
-          />
-          <p>
-            <strong>Descripción:</strong> Plataforma web con migración exitosa
-            de base de datos desde MySQL a PostgreSQL, implementando buenas
-            prácticas con Composer y Git.
-          </p>
-          <p><strong>Tecnologías:</strong> Laravel, PostgreSQL, Git.</p>
-        </div>
-      </div>
-
-      <div id="modal2" class="modal">
-        <div class="modal-content">
-          <span class="close-btn" onclick="closeModal('modal2')">&times;</span>
-          <h2>Controlador de Dron</h2>
-          <img
-            src="./img/proyecto2.jpg"
-            alt="Detalle Proyecto 2"
-            class="modal-img"
-          />
-          <p>
-            <strong>Descripción:</strong> Diseño de circuitos y programación de
-            microcontroladores para el vuelo y estabilización de un dron.
-          </p>
-          <p>
-            <strong>Tecnologías:</strong> ESP32, C/C++, Diseño de Circuitos.
-          </p>
-        </div>
-      </div>
-
-      <div id="modal3" class="modal">
-        <div class="modal-content">
-          <span class="close-btn" onclick="closeModal('modal3')">&times;</span>
-          <h2>Generación de Assets</h2>
-          <img
-            src="./img/proyecto3.jpg"
-            alt="Detalle Proyecto 3"
-            class="modal-img"
-          />
-          <p>
-            <strong>Descripción:</strong> Automatización y creación de assets
-            visuales en formato pixel art utilizando scripts.
-          </p>
-          <p><strong>Tecnologías:</strong> Python, Generación de Imágenes.</p>
-        </div>
-      </div>
-
       <section id="contacto" class="section contact-section">
         <div class="container hidden">
           <h3 class="section-title text-center text-white">Contáctame</h3>
@@ -880,15 +696,15 @@
             <div class="contact-info">
               <div class="contact-item">
                 <i class="fas fa-envelope"></i>
-                <span>tu_correo@email.com</span>
+                <span>kevinalexis01mujica@email.com</span>
               </div>
               <div class="contact-item">
                 <i class="fab fa-linkedin"></i>
-                <a href="#">linkedin.com/in/tu-perfil</a>
+                <a href="#">Kevin Alexis Mujica Laime</a>
               </div>
               <div class="contact-item">
                 <i class="fab fa-github"></i>
-                <a href="#">github.com/tu-usuario</a>
+                <a href="#">Alexis Mujica Laime</a>
               </div>
             </div>
 
