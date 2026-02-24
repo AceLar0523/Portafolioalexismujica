@@ -1,0 +1,377 @@
+/* --- Variables y Reset --- */
+:root {
+    --color-coffee: #6F4E37;      /* Café elegante */
+    --color-coffee-dark: #4A332A; /* Café oscuro para hover */
+    --color-black: #1a1a1a;
+    --color-white: #ffffff;
+    --color-gray-light: #f4f4f4;
+    --color-text: #333333;
+    --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--color-text);
+    background-color: var(--color-white);
+    line-height: 1.6;
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* --- Navegación --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background: var(--color-white);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-coffee);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--color-coffee);
+}
+
+/* --- Hero Banner --- */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('./img/banner-bg.jpg'); /* Pon una imagen de fondo abstracta o de código aquí */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-white);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin: 1rem 0;
+    font-weight: 700;
+}
+
+.hero h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    color: #ddd;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Botones */
+.btn {
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: var(--color-coffee);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-coffee-dark);
+}
+
+.btn-outline {
+    border: 2px solid var(--color-white);
+    color: var(--color-white);
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: var(--color-white);
+    color: var(--color-black);
+}
+
+/* --- Secciones Generales --- */
+.section {
+    padding: 5rem 10%;
+}
+
+.bg-light { background-color: var(--color-gray-light); }
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: var(--color-coffee);
+    position: relative;
+    display: inline-block;
+}
+
+.text-center { text-align: center; width: 100%; }
+
+/* --- Perfil --- */
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.profile-img-box img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 10px 10px 0px var(--color-coffee);
+}
+
+.personal-data-card {
+    margin-top: 2rem;
+    background: var(--color-gray-light);
+    padding: 1.5rem;
+    border-left: 4px solid var(--color-coffee);
+}
+
+/* --- Skills Dinámicas --- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.skill-card {
+    background: var(--color-white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: var(--color-coffee);
+    border-radius: 5px;
+    animation: slideIn 1.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+    from { width: 0; }
+}
+
+/* --- Formación (Timeline simple) --- */
+.timeline-item {
+    border-left: 2px solid var(--color-coffee);
+    padding-left: 20px;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: var(--color-coffee);
+    border-radius: 50%;
+    position: absolute;
+    left: -7px;
+    top: 5px;
+}
+
+.date {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: bold;
+}
+
+/* --- Proyectos (Grid y Hover) --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--color-white);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-img-wrapper {
+    position: relative;
+    height: 200px;
+}
+
+.project-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(111, 78, 55, 0.8); /* Café con transparencia */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    color: white;
+    font-size: 2rem;
+}
+
+.project-card:hover .overlay {
+    opacity: 1;
+}
+
+.project-info { padding: 1.5rem; text-align: center; }
+
+/* --- Modales (Pop-ups) --- */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 2000; 
+    left: 0; top: 0; 
+    width: 100%; height: 100%; 
+    background-color: rgba(0,0,0,0.8); 
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    animation: popIn 0.3s ease;
+}
+
+@keyframes popIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px; right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.modal-img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin: 1rem 0;
+}
+
+/* --- Contacto --- */
+.contact-section {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+.text-white { color: var(--color-white); }
+
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.contact-item i { color: var(--color-coffee); }
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.contact-form button {
+    border: none;
+    margin-top: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #111;
+    color: #777;
+    font-size: 0.9rem;
+}

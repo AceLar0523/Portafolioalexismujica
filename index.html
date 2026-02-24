@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Profesional | Ing. de Sistemas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Portafolio.</div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#perfil">Perfil</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#formacion">Formación</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <header id="inicio" class="hero">
+        <div class="hero-content">
+            <p class="greeting">Hola, soy</p>
+            <h1>Kevin Alexis Mujica Laime</h1>
+            <h2>Estudiante de Ingeniería de Sistemas</h2>
+            <div class="hero-btns">
+                <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
+                <a href="#contacto" class="btn btn-outline">Contáctame</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="perfil" class="section profile-section">
+        <div class="container profile-container">
+            <div class="profile-img-box">
+                <img src="./img/perfil.jpg" alt="Foto de Perfil" class="profile-img">
+            </div>
+            <div class="profile-info">
+                <h3 class="section-title">Perfil Profesional</h3>
+                <p class="profile-text">
+                    Estudiante apasionado por el desarrollo de software y la arquitectura de sistemas. 
+                    Me enfoco en crear soluciones digitales eficientes y escalables. Busco oportunidades 
+                    para aplicar mis conocimientos en entornos reales y seguir aprendiendo nuevas tecnologías.
+                </p>
+                
+                <div class="personal-data-card">
+                    <h4>Datos Personales</h4>
+                    <ul>
+                        <li><strong>Edad:</strong> 21 años</li>
+                        <li><strong>Ubicación:</strong> [Tu Ciudad, País]</li>
+                        <li><strong>Estado:</strong> Estudiante Activo</li>
+                        <li><strong>Intereses:</strong> Desarrollo Web, Backend, IA</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section bg-light">
+        <div class="container">
+            <h3 class="section-title text-center">Habilidades Técnicas</h3>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span>Java / C#</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span>HTML5 & CSS3</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span>Base de Datos (SQL)</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span>Git / GitHub</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="formacion" class="section">
+        <div class="container">
+            <h3 class="section-title text-center">Formación y Certificados</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="date">2023 - Presente</span>
+                    <h4>Ingeniería de Sistemas</h4>
+                    <p>Universidad [Nombre de tu Universidad]</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="date">2024</span>
+                    <h4>Certificación en Desarrollo Full Stack</h4>
+                    <p>Plataforma / Institución [Nombre]</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="date">2023</span>
+                    <h4>Curso de Algoritmos Avanzados</h4>
+                    <p>Plataforma / Institución [Nombre]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyectos" class="section bg-light">
+        <div class="container">
+            <h3 class="section-title text-center">Proyectos Académicos</h3>
+            <div class="projects-grid">
+                <div class="project-card" onclick="openModal('modal1')">
+                    <div class="project-img-wrapper">
+                        <img src="./img/proyecto1.jpg" alt="Proyecto 1">
+                        <div class="overlay">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h4>Sistema de Gestión de Ventas</h4>
+                        <p>Aplicación de Escritorio</p>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="openModal('modal2')">
+                    <div class="project-img-wrapper">
+                        <img src="./img/proyecto2.jpg" alt="Proyecto 2">
+                        <div class="overlay">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h4>Portal Web Educativo</h4>
+                        <p>Desarrollo Web</p>
+                    </div>
+                </div>
+                
+                <div class="project-card" onclick="openModal('modal3')">
+                    <div class="project-img-wrapper">
+                        <img src="./img/proyecto3.jpg" alt="Proyecto 3">
+                        <div class="overlay">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h4>App Móvil de Tareas</h4>
+                        <p>Desarrollo Móvil</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
+            <h2>Sistema de Gestión de Ventas</h2>
+            <img src="./img/proyecto1.jpg" alt="Detalle Proyecto 1" class="modal-img">
+            <p><strong>Descripción:</strong> Sistema desarrollado en Java para el control de inventarios y facturación de una PYME.</p>
+            <p><strong>Tecnologías:</strong> Java Swing, MySQL, JDBC.</p>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal2')">&times;</span>
+            <h2>Portal Web Educativo</h2>
+            <img src="./img/proyecto2.jpg" alt="Detalle Proyecto 2" class="modal-img">
+            <p><strong>Descripción:</strong> Plataforma para la gestión de material de estudio y foros de discusión estudiantil.</p>
+            <p><strong>Tecnologías:</strong> HTML, CSS, JavaScript, PHP.</p>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal3')">&times;</span>
+            <h2>App Móvil de Tareas</h2>
+            <img src="./img/proyecto3.jpg" alt="Detalle Proyecto 3" class="modal-img">
+            <p><strong>Descripción:</strong> Aplicación para organización personal con recordatorios y categorías.</p>
+            <p><strong>Tecnologías:</strong> Flutter / React Native.</p>
+        </div>
+    </div>
+
+    <section id="contacto" class="section contact-section">
+        <div class="container">
+            <h3 class="section-title text-center text-white">Contáctame</h3>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>tu_correo@email.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="#">linkedin.com/in/tu-perfil</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="#">github.com/tu-usuario</a>
+                    </div>
+                </div>
+
+                <form class="contact-form" action="mailto:tu_correo@email.com" method="post" enctype="text/plain">
+                    <input type="text" name="nombre" placeholder="Tu Nombre" required>
+                    <input type="email" name="email" placeholder="Tu Correo" required>
+                    <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 [Tu Nombre]. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
