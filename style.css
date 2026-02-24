@@ -174,10 +174,78 @@ ul { list-style: none; }
     transition: width 1.5s cubic-bezier(0.25, 0.8, 0.25, 1); 
 }
 
-/* --- Formación --- */
-.timeline-item { border-left: 2px solid var(--color-coffee); padding-left: 20px; margin-bottom: 2rem; position: relative; }
-.timeline-item::before { content: ''; width: 14px; height: 14px; background: var(--color-coffee); border-radius: 50%; position: absolute; left: -8px; top: 5px; box-shadow: 0 0 0 3px var(--color-gray-light); }
-.date { font-size: 0.9rem; color: #666; font-weight: bold; }
+/* --- Resumen (Educación y Cursos - Estilo CV) --- */
+.resume-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+
+.resume-column {
+    width: 100%;
+}
+
+.resume-title {
+    font-size: 1.6rem;
+    color: var(--color-coffee-dark);
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.resume-timeline {
+    border-left: 2px solid var(--color-coffee); 
+    padding-left: 30px;
+}
+
+.resume-item {
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+
+/* Círculo vacío en la línea de tiempo */
+.resume-item::before {
+    content: '';
+    position: absolute;
+    left: -37px; 
+    top: 0;
+    width: 12px;
+    height: 12px;
+    border: 2px solid var(--color-coffee);
+    border-radius: 50%;
+    background: var(--color-white); 
+    box-shadow: 0 0 0 4px var(--color-white); 
+}
+
+.resume-item h5 {
+    font-size: 1.1rem;
+    color: var(--color-black);
+    margin-bottom: 0.3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.resume-item .resume-date {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: #555;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.resume-item .resume-inst {
+    display: block;
+    font-size: 1rem;
+    color: var(--color-coffee);
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.resume-item p {
+    font-size: 0.95rem;
+    color: #444;
+}
 
 /* --- Proyectos (Tarjetas Grid) --- */
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
@@ -246,7 +314,7 @@ ul { list-style: none; }
 /* Texto Introductorio */
 .modal-intro { font-size: 1.15rem; color: #555; line-height: 1.6; margin-bottom: 2.5rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem; }
 
-/* Layout de dos columnas */
+/* Layout de dos columnas para Modales */
 .modal-body-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 3rem; margin-bottom: 2rem; }
 .section-subtitle { color: var(--color-coffee); font-size: 0.9rem; letter-spacing: 0.5px; margin-bottom: 1.2rem; text-transform: uppercase; font-weight: bold; }
 
@@ -293,6 +361,9 @@ footer { text-align: center; padding: 2rem; background: #0a0a0a; color: #777; fo
 
     /* Ajuste para los skills en móviles (una columna) */
     .skills-list-grid { grid-template-columns: 1fr; }
+
+    /* Ajuste para el Resumen/Educación en móviles (una columna) */
+    .resume-grid { grid-template-columns: 1fr; gap: 2rem; }
 
     /* Ajuste del Modal AGETIC en móviles */
     .modal-body-grid { grid-template-columns: 1fr; gap: 2rem; }
