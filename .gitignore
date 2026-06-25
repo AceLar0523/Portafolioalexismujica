@@ -9,9 +9,6 @@ server.js
 .env.*
 !.env.example
 
-# Recursos locales no versionados
-img/
-
 # Logs
 npm-debug.log*
 yarn-debug.log*
