@@ -250,8 +250,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const contactForm = document.getElementById('contactForm');
     const contactStatus = document.getElementById('contactStatus');
+    const contactFrame = document.getElementById('contactSubmitFrame');
+    const contactReplyTo = document.getElementById('contactReplyTo');
 
-    if (contactForm && contactStatus) {
+    if (contactForm && contactStatus && contactFrame && contactReplyTo) {
+        let formSubmitted = false;
+
         contactForm.addEventListener('submit', async (event) => {
             event.preventDefault();
 
@@ -270,53 +274,35 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
+            contactReplyTo.value = payload.email;
+
             if (submitButton) {
                 submitButton.disabled = true;
                 submitButton.textContent = 'Enviando...';
             }
 
-            try {
-                const formPayload = new URLSearchParams({
-                    name: payload.nombre,
-                    email: payload.email,
-                    message: payload.mensaje,
-                    _subject: 'Nuevo mensaje desde tu portafolio',
-                    _captcha: 'false',
-                    _template: 'table',
-                });
+            formSubmitted = true;
+            contactStatus.textContent = 'Enviando mensaje...';
+            contactStatus.className = 'contact-status';
+            showToast('info', 'Enviando', 'Estamos enviando tu mensaje. Espera unos segundos.');
+            contactForm.submit();
+        });
 
-                const response = await fetch('https://formsubmit.co/ajax/kevinalexis01mujica@gmail.com', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-                        Accept: 'application/json',
-                    },
-                    body: formPayload.toString(),
-                });
+        contactFrame.addEventListener('load', () => {
+            if (!formSubmitted) {
+                return;
+            }
 
-                const data = await response.json().catch(() => ({}));
+            formSubmitted = false;
+            contactStatus.textContent = 'Mensaje enviado correctamente. Te responderé pronto.';
+            contactStatus.className = 'contact-status success';
+            showToast('success', 'Mensaje enviado', 'Tu mensaje fue enviado correctamente. Revisa tu correo si FormSubmit solicita activación inicial.');
+            contactForm.reset();
 
-                if (!response.ok) {
-                    throw new Error(data.error || 'No se pudo enviar el mensaje.');
-                }
-
-                contactStatus.textContent = 'Mensaje enviado correctamente. Te responderé pronto.';
-                contactStatus.className = 'contact-status success';
-                showToast('success', 'Mensaje enviado', 'Tu mensaje fue enviado correctamente. Revisaré el correo y te responderé pronto.');
-                contactForm.reset();
-            } catch (error) {
-                contactStatus.textContent = 'No fue posible enviar el mensaje en este momento.';
-                contactStatus.className = 'contact-status error';
-                showToast(
-                    'error',
-                    'No se pudo enviar',
-                    'Si es tu primer envío con FormSubmit, revisa tu correo y confirma la activación del formulario. Luego vuelve a intentarlo.'
-                );
-            } finally {
-                if (submitButton) {
-                    submitButton.disabled = false;
-                    submitButton.textContent = 'Enviar Mensaje';
-                }
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            if (submitButton) {
+                submitButton.disabled = false;
+                submitButton.textContent = 'Enviar Mensaje';
             }
         });
     }

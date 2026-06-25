@@ -887,7 +887,17 @@
   
             </div>
 
-            <form class="contact-form" id="contactForm">
+            <form
+              class="contact-form"
+              id="contactForm"
+              action="https://formsubmit.co/kevinalexis01mujica@gmail.com"
+              method="POST"
+              target="contactSubmitFrame"
+            >
+              <input type="hidden" name="_subject" value="Nuevo mensaje desde tu portafolio" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="text" name="_honey" style="display: none" tabindex="-1" autocomplete="off" />
               <input
                 type="text"
                 name="nombre"
@@ -900,6 +910,7 @@
                 placeholder="Tu Correo"
                 required
               />
+              <input type="hidden" name="_replyto" id="contactReplyTo" />
               <textarea
                 name="mensaje"
                 rows="5"
@@ -911,6 +922,12 @@
               </button>
               <p id="contactStatus" class="contact-status" role="status" aria-live="polite"></p>
             </form>
+            <iframe
+              title="contact-submit-frame"
+              name="contactSubmitFrame"
+              id="contactSubmitFrame"
+              style="display: none"
+            ></iframe>
           </div>
         </div>
       </section>
