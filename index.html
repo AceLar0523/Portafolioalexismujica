@@ -44,11 +44,28 @@
 
     <main class="main-content">
       <header id="inicio" class="hero hidden">
+        <div class="hero-aurora" aria-hidden="true">
+          <span class="aurora-blob blob-1"></span>
+          <span class="aurora-blob blob-2"></span>
+          <span class="aurora-blob blob-3"></span>
+        </div>
+
+        <div class="hero-floating-icons" aria-hidden="true">
+          <i class="fas fa-brain" style="--x: 8%; --y: 18%; --delay: 0s"></i>
+          <i class="fas fa-code" style="--x: 22%; --y: 76%; --delay: 1.4s"></i>
+          <i class="fas fa-robot" style="--x: 38%; --y: 26%; --delay: 0.6s"></i>
+          <i class="fas fa-database" style="--x: 57%; --y: 72%; --delay: 2.1s"></i>
+          <i class="fas fa-chart-line" style="--x: 73%; --y: 20%; --delay: 1s"></i>
+          <i class="fas fa-atom" style="--x: 86%; --y: 62%; --delay: 2.8s"></i>
+          <i class="fas fa-network-wired" style="--x: 12%; --y: 52%; --delay: 1.8s"></i>
+          <i class="fas fa-lightbulb" style="--x: 80%; --y: 38%; --delay: 2.4s"></i>
+        </div>
+
         <div class="hero-content">
           <p class="greeting">Hola, soy</p>
           <h1>Kevin Alexis Mujica Laime</h1>
           <h2>
-            Ingeniería de Sistemas | Desarrollador Web & Microcontroladores
+            Ingeniería de Sistemas | Desarrollador Full Stack & Inteligencia Artificial
           </h2>
           <div class="hero-btns">
             <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
@@ -64,12 +81,12 @@
           </div>
 
           <p class="about-intro-text text-center">
-            Estudiante de Ingeniería de Sistemas con sólida base en desarrollo
-            web, análisis de sistemas y programación de microcontroladores. He
-            desarrollado proyectos académicos e independientes enfocados en
-            aportar soluciones tecnológicas eficientes. Me caracteriza la
-            proactividad, el pensamiento analítico y la capacidad de adaptación
-            en entornos dinámicos y de aprendizaje continuo.
+            Estudiante de Ingeniería de Sistemas con orientación en desarrollo
+            Full Stack e Inteligencia Artificial aplicada. He participado en
+            proyectos académicos y profesionales enfocados en optimizar
+            procesos, automatizar operaciones y construir soluciones digitales
+            escalables. Destaco por mi pensamiento analítico, aprendizaje
+            continuo y capacidad para adaptarme a entornos de alta exigencia.
           </p>
 
           <div class="about-grid">
@@ -83,12 +100,13 @@
 
             <div class="about-details">
               <h3 class="about-role">
-                Estudiante de Ingeniería de Sistemas & Desarrollador Web
+                Estudiante de Ingeniería de Sistemas & Desarrollador Full Stack
               </h3>
               <p class="about-italic">
-                Apasionado por construir soluciones innovadoras, automatizar
-                procesos e integrar tecnologías de software y hardware para
-                generar un impacto real.
+                Apasionado por transformar necesidades reales en productos
+                tecnológicos de alto impacto, integrando ingeniería de
+                software, analítica de datos y modelos de Inteligencia
+                Artificial.
               </p>
 
               <ul class="about-info-list">
@@ -132,12 +150,13 @@
               </ul>
 
               <p class="about-closing-text">
-                Cuento con conocimientos sólidos en desarrollo web (PostgreSQL,
-                MySQL, Laravel), automatización con Python y programación
-                orientada a objetos (Java). Además, tengo experiencia práctica
-                en diseño de circuitos y robótica usando ESP32. Busco
-                oportunidades profesionales para implementar soluciones robustas
-                y seguir expandiendo mis habilidades tecnológicas.
+                Cuento con experiencia en arquitectura y desarrollo de
+                aplicaciones Full Stack, gestión de bases de datos y
+                automatización con Python. También he implementado soluciones
+                con modelos de IA y flujos inteligentes orientados a mejorar la
+                toma de decisiones. Mi objetivo es aportar valor en equipos
+                multidisciplinarios, diseñando sistemas robustos, mantenibles y
+                alineados con objetivos de negocio.
               </p>
             </div>
           </div>
@@ -154,59 +173,344 @@
             </p>
           </div>
 
-          <div class="skills-list-grid">
-            <div class="skill-item">
-              <div class="skill-header">
-                <span>HTML / CSS / VUE.JS / VUETIFY</span>
-                <span>90%</span>
+          <div class="skills-cards-grid">
+            <article class="skill-card" data-skill-area="frontend">
+              <div class="skill-card-top">
+                <div>
+                  <h4 class="skill-area-title">Frontend</h4>
+                  <p class="skill-area-subtitle">Interfaces web modernas</p>
+                </div>
+                <button
+                  type="button"
+                  class="skill-more-btn"
+                  onclick="openModal('skillModalFrontend')"
+                >
+                  <i class="fas fa-circle-info"></i> Saber más
+                </button>
               </div>
-              <div class="progress-bar">
-                <div class="progress" data-width="90%"></div>
+              <div class="skill-summary">
+                <div class="skill-header">
+                  <span>Promedio del área</span>
+                  <span class="skill-average-value">0%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress skill-summary-progress" data-width="0%"></div>
+                </div>
               </div>
-            </div>
+            </article>
 
-            <div class="skill-item">
-              <div class="skill-header">
-                <span>BASES DE DATOS (MYSQL, POSTGRESQL, SQL SERVER)</span>
-                <span>85%</span>
+            <article class="skill-card" data-skill-area="bases-datos">
+              <div class="skill-card-top">
+                <div>
+                  <h4 class="skill-area-title">Bases de Datos</h4>
+                  <p class="skill-area-subtitle">Modelado y rendimiento SQL</p>
+                </div>
+                <button
+                  type="button"
+                  class="skill-more-btn"
+                  onclick="openModal('skillModalDB')"
+                >
+                  <i class="fas fa-circle-info"></i> Saber más
+                </button>
               </div>
-              <div class="progress-bar">
-                <div class="progress" data-width="85%"></div>
+              <div class="skill-summary">
+                <div class="skill-header">
+                  <span>Promedio del área</span>
+                  <span class="skill-average-value">0%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress skill-summary-progress" data-width="0%"></div>
+                </div>
               </div>
-            </div>
+            </article>
 
-            <div class="skill-item">
-              <div class="skill-header">
-                <span>BACKEND (PHP/LARAVEL, PYTHON, TYPESCRIPT/NEST.JS)</span>
-                <span>75%</span>
+            <article class="skill-card" data-skill-area="backend">
+              <div class="skill-card-top">
+                <div>
+                  <h4 class="skill-area-title">Backend</h4>
+                  <p class="skill-area-subtitle">APIs, lógica y arquitectura</p>
+                </div>
+                <button
+                  type="button"
+                  class="skill-more-btn"
+                  onclick="openModal('skillModalBackend')"
+                >
+                  <i class="fas fa-circle-info"></i> Saber más
+                </button>
               </div>
-              <div class="progress-bar">
-                <div class="progress" data-width="75%"></div>
+              <div class="skill-summary">
+                <div class="skill-header">
+                  <span>Promedio del área</span>
+                  <span class="skill-average-value">0%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress skill-summary-progress" data-width="0%"></div>
+                </div>
               </div>
-            </div>
+            </article>
 
-            <div class="skill-item">
-              <div class="skill-header">
-                <span>IA / VISIÓN (TENSORFLOW, OPENCV)</span>
-                <span>70%</span>
+            <article class="skill-card" data-skill-area="ia-vision">
+              <div class="skill-card-top">
+                <div>
+                  <h4 class="skill-area-title">Inteligencia Artificial</h4>
+                  <p class="skill-area-subtitle">Modelos, agentes y automatización</p>
+                </div>
+                <button
+                  type="button"
+                  class="skill-more-btn"
+                  onclick="openModal('skillModalIA')"
+                >
+                  <i class="fas fa-circle-info"></i> Saber más
+                </button>
               </div>
-              <div class="progress-bar">
-                <div class="progress" data-width="70%"></div>
+              <div class="skill-summary">
+                <div class="skill-header">
+                  <span>Promedio del área</span>
+                  <span class="skill-average-value">0%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress skill-summary-progress" data-width="0%"></div>
+                </div>
               </div>
-            </div>
+            </article>
 
-            <div class="skill-item">
-              <div class="skill-header">
-                <span>OTROS (NEXT.JS, MATERIAL UI, FLUTTER, C# .NET)</span>
-                <span>60%</span>
+            <article class="skill-card" data-skill-area="otros">
+              <div class="skill-card-top">
+                <div>
+                  <h4 class="skill-area-title">DevOps y Herramientas</h4>
+                  <p class="skill-area-subtitle">Infraestructura y colaboración</p>
+                </div>
+                <button
+                  type="button"
+                  class="skill-more-btn"
+                  onclick="openModal('skillModalOtros')"
+                >
+                  <i class="fas fa-circle-info"></i> Saber más
+                </button>
               </div>
-              <div class="progress-bar">
-                <div class="progress" data-width="60%"></div>
+              <div class="skill-summary">
+                <div class="skill-header">
+                  <span>Promedio del área</span>
+                  <span class="skill-average-value">0%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress skill-summary-progress" data-width="0%"></div>
+                </div>
               </div>
-            </div>
+            </article>
           </div>
         </div>
       </section>
+
+      <div id="skillModalFrontend" class="modal skill-modal" data-skill-area="frontend">
+        <div class="modal-content skill-modal-content">
+          <span class="close-btn" onclick="closeModal('skillModalFrontend')">&times;</span>
+          <div class="modal-header">
+            <h2>Frontend</h2>
+          </div>
+          <p class="modal-intro">
+            Desarrollo de interfaces responsivas, componentes reutilizables y experiencia de usuario.
+          </p>
+          <div class="skill-detail-list">
+            <div class="skill-detail-item">
+              <div class="skill-detail-head">
+                <span>HTML5 + CSS3</span>
+                <span class="skill-level-chip level-avanzado">Avanzado</span>
+              </div>
+              <div class="skill-level-track"><div class="skill-level-fill" data-level="avanzado" data-percent="90"></div></div>
+            </div>
+            <div class="skill-detail-item">
+              <div class="skill-detail-head">
+                <span>Vue.js + Vuetify</span>
+                <span class="skill-level-chip level-avanzado">Avanzado</span>
+              </div>
+              <div class="skill-level-track"><div class="skill-level-fill" data-level="avanzado" data-percent="87"></div></div>
+            </div>
+            <div class="skill-detail-item">
+              <div class="skill-detail-head">
+                <span>Angular</span>
+                <span class="skill-level-chip level-intermedio">Intermedio</span>
+              </div>
+              <div class="skill-level-track"><div class="skill-level-fill" data-level="intermedio" data-percent="70"></div></div>
+            </div>
+            <div class="skill-detail-item">
+              <div class="skill-detail-head">
+                <span>React</span>
+                <span class="skill-level-chip level-intermedio">Intermedio</span>
+              </div>
+              <div class="skill-level-track"><div class="skill-level-fill" data-level="intermedio" data-percent="70"></div></div>
+            </div>
+            <div class="skill-detail-item">
+              <div class="skill-detail-head">
+                <span>Flutter</span>
+                <span class="skill-level-chip level-intermedio">Intermedio</span>
+              </div>
+              <div class="skill-level-track"><div class="skill-level-fill" data-level="intermedio" data-percent="78"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="skillModalDB" class="modal skill-modal" data-skill-area="bases-datos">
+        <div class="modal-content skill-modal-content">
+          <span class="close-btn" onclick="closeModal('skillModalDB')">&times;</span>
+          <div class="modal-header">
+            <h2>Bases de Datos</h2>
+          </div>
+          <p class="modal-intro">
+            Diseño de esquemas, optimización de consultas y mantenimiento de información crítica.
+          </p>
+          <div class="skill-detail-list">
+            <div class="skill-detail-item">
+              <div class="skill-detail-head">
+                <span>PostgreSQL</span>
+                <span class="skill-level-chip level-intermedio">Intermedio</span>
+              </div>
+              <div class="skill-level-track"><div class="skill-level-fill" data-level="intermedio" data-percent="78"></div></div>
+            </div>
+            <div class="skill-detail-item">
+              <div class="skill-detail-head">
+                <span>MySQL</span>
+                <span class="skill-level-chip level-intermedio">Intermedio</span>
+              </div>
+              <div class="skill-level-track"><div class="skill-level-fill" data-level="intermedio" data-percent="77"></div></div>
+            </div>
+            <div class="skill-detail-item">
+              <div class="skill-detail-head">
+                <span>SQL Server</span>
+                <span class="skill-level-chip level-intermedio">Intermedio</span>
+              </div>
+              <div class="skill-level-track"><div class="skill-level-fill" data-level="intermedio" data-percent="72"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="skillModalBackend" class="modal skill-modal" data-skill-area="backend">
+        <div class="modal-content skill-modal-content">
+          <span class="close-btn" onclick="closeModal('skillModalBackend')">&times;</span>
+          <div class="modal-header">
+            <h2>Backend</h2>
+          </div>
+          <p class="modal-intro">
+            Construcción de APIs y lógica de negocio enfocada en rendimiento y escalabilidad.
+          </p>
+          <div class="skill-detail-list">
+            <div class="skill-detail-item">
+              <div class="skill-detail-head">
+                <span>PHP / Laravel</span>
+                <span class="skill-level-chip level-intermedio">Intermedio</span>
+              </div>
+              <div class="skill-level-track"><div class="skill-level-fill" data-level="intermedio" data-percent="80"></div></div>
+            </div>
+            <div class="skill-detail-item">
+              <div class="skill-detail-head">
+                <span>Python</span>
+                <span class="skill-level-chip level-avanzado">Avanzado</span>
+              </div>
+              <div class="skill-level-track"><div class="skill-level-fill" data-level="avanzado" data-percent="90"></div></div>
+            </div>
+            <div class="skill-detail-item">
+              <div class="skill-detail-head">
+                <span>Django</span>
+                <span class="skill-level-chip level-avanzado">Avanzado</span>
+              </div>
+              <div class="skill-level-track"><div class="skill-level-fill" data-level="avanzado" data-percent="90"></div></div>
+            </div>
+            <div class="skill-detail-item">
+              <div class="skill-detail-head">
+                <span>TypeScript / Nest.js</span>
+                <span class="skill-level-chip level-avanzado">Avanzado</span>
+              </div>
+              <div class="skill-level-track"><div class="skill-level-fill" data-level="avanzado" data-percent="90"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="skillModalIA" class="modal skill-modal" data-skill-area="ia-vision">
+        <div class="modal-content skill-modal-content">
+          <span class="close-btn" onclick="closeModal('skillModalIA')">&times;</span>
+          <div class="modal-header">
+            <h2>Inteligencia Artificial</h2>
+          </div>
+          <p class="modal-intro">
+            Desarrollo de soluciones inteligentes con modelos generativos, agentes y análisis predictivo.
+          </p>
+          <div class="skill-detail-list">
+            <div class="skill-detail-item">
+              <div class="skill-detail-head">
+                <span>IA Generativa y LLM (Gemini API, Ollama)</span>
+                <span class="skill-level-chip level-avanzado">Avanzado</span>
+              </div>
+              <div class="skill-level-track"><div class="skill-level-fill" data-level="avanzado" data-percent="90"></div></div>
+            </div>
+            <div class="skill-detail-item">
+              <div class="skill-detail-head">
+                <span>Automatización de Flujos Inteligentes "AI Agents" (N8N)</span>
+                <span class="skill-level-chip level-intermedio">Intermedio</span>
+              </div>
+              <div class="skill-level-track"><div class="skill-level-fill" data-level="intermedio" data-percent="88"></div></div>
+            </div>
+            <div class="skill-detail-item">
+              <div class="skill-detail-head">
+                <span>Machine Learning y Modelado Predictivo</span>
+                <span class="skill-level-chip level-intermedio">Intermedio</span>
+              </div>
+              <div class="skill-level-track"><div class="skill-level-fill" data-level="intermedio" data-percent="84"></div></div>
+            </div>
+            <div class="skill-detail-item">
+              <div class="skill-detail-head">
+                <span>Visión Artificial y procesamiento de Imagenes</span>
+                <span class="skill-level-chip level-basico">Básico</span>
+              </div>
+              <div class="skill-level-track"><div class="skill-level-fill" data-level="basico" data-percent="50"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="skillModalOtros" class="modal skill-modal" data-skill-area="otros">
+        <div class="modal-content skill-modal-content">
+          <span class="close-btn" onclick="closeModal('skillModalOtros')">&times;</span>
+          <div class="modal-header">
+            <h2>DevOps y Herramientas</h2>
+          </div>
+          <p class="modal-intro">
+            Herramientas clave para despliegue, entornos de desarrollo y trabajo colaborativo.
+          </p>
+          <div class="skill-detail-list">
+            <div class="skill-detail-item">
+              <div class="skill-detail-head">
+                <span>Docker</span>
+                <span class="skill-level-chip level-intermedio">Intermedio</span>
+              </div>
+              <div class="skill-level-track"><div class="skill-level-fill" data-level="intermedio" data-percent="70"></div></div>
+            </div>
+            <div class="skill-detail-item">
+              <div class="skill-detail-head">
+                <span>Linux</span>
+                <span class="skill-level-chip level-intermedio">Intermedio</span>
+              </div>
+              <div class="skill-level-track"><div class="skill-level-fill" data-level="intermedio" data-percent="70"></div></div>
+            </div>
+            <div class="skill-detail-item">
+              <div class="skill-detail-head">
+                <span>Git</span>
+                <span class="skill-level-chip level-avanzado">Avanzado</span>
+              </div>
+              <div class="skill-level-track"><div class="skill-level-fill" data-level="avanzado" data-percent="90"></div></div>
+            </div>
+            <div class="skill-detail-item">
+              <div class="skill-detail-head">
+                <span>Cisco</span>
+                <span class="skill-level-chip level-intermedio">Intermedio</span>
+              </div>
+              <div class="skill-level-track"><div class="skill-level-fill" data-level="intermedio" data-percent="70"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <section id="formacion" class="section">
         <div class="container hidden">
@@ -255,7 +559,7 @@
               <h4 class="resume-title">Certificaciones y Cursos</h4>
               <div class="resume-timeline">
                 <div class="resume-item">
-                  <h5>Programación Arduino de Básico a Avanzado</h5>
+                  <h5>Fundamentos de Inteligencia Artificial Aplicada</h5>
                   <span class="resume-date">Gestión 2024</span>
                   <span class="resume-inst"
                     >CIE (Colegio de Ingenieros en Electrónica)</span
@@ -311,53 +615,56 @@
           <div class="projects-grid">
             <div class="project-card" onclick="openModal('modal1')">
               <div class="project-img-wrapper">
-                <img src="./img/proyecto1.jpg" alt="Sistema Burnout" />
-                <div class="overlay">
-                  <i class="fas fa-external-link-alt"></i>
-                </div>
+                <img src="./img/jawi1.png" alt="Jawitas Mi Chulumani" />
+                <div class="overlay"><i class="fas fa-external-link-alt"></i></div>
               </div>
               <div class="project-info">
-                <h4>Sistema Experto: Prevención de Burnout</h4>
-                <p>Inteligencia Artificial y Salud</p>
+                <h4>Jawitas Mi Chulumani</h4>
+                <p>Sistema de Gestión Integral y Asistencia Gerencial</p>
               </div>
             </div>
 
             <div class="project-card" onclick="openModal('modal2')">
               <div class="project-img-wrapper">
-                <img src="./img/proyecto2.jpg" alt="Jawitas mi Chulumani" />
-                <div class="overlay">
-                  <i class="fas fa-external-link-alt"></i>
-                </div>
+                <img src="./img/burnout1.jpeg" alt="Sistema Experto Burnout" />
+                <div class="overlay"><i class="fas fa-external-link-alt"></i></div>
               </div>
               <div class="project-info">
-                <h4>Gestión Integral Jawitas</h4>
-                <p>Sistema Web para Sucursales</p>
+                <h4>Sistema Experto Burnout</h4>
+                <p>Predicción Temprana del Síndrome de Burnout</p>
               </div>
             </div>
 
             <div class="project-card" onclick="openModal('modal3')">
               <div class="project-img-wrapper">
-                <img src="./img/proyecto3.jpg" alt="Ruta Corta Haversine" />
-                <div class="overlay">
-                  <i class="fas fa-external-link-alt"></i>
-                </div>
+                <img src="./img/mesa1.jpeg" alt="Mesa Nacional de Maternidad" />
+                <div class="overlay"><i class="fas fa-external-link-alt"></i></div>
               </div>
               <div class="project-info">
-                <h4>Ruta más corta (Haversine)</h4>
-                <p>Geolocalización y Algoritmos</p>
+                <h4>Mesa Nacional de Maternidad</h4>
+                <p>Portal Institucional de Nacimiento Seguro</p>
               </div>
             </div>
 
             <div class="project-card" onclick="openModal('modal4')">
               <div class="project-img-wrapper">
-                <img src="./img/pro4a.jpeg" alt="Predicción de Clima" />
-                <div class="overlay">
-                  <i class="fas fa-external-link-alt"></i>
-                </div>
+                <img src="./img/tqa1.png" alt="Framework TQA" />
+                <div class="overlay"><i class="fas fa-external-link-alt"></i></div>
               </div>
               <div class="project-info">
-                <h4>Predicción de Clima</h4>
-                <p>Minería de Datos y Machine Learning</p>
+                <h4>Framework TQA</h4>
+                <p>Automatización de Pruebas de Software</p>
+              </div>
+            </div>
+
+            <div class="project-card" onclick="openModal('modal5')">
+              <div class="project-img-wrapper">
+                <img src="./img/redes1.jpeg" alt="Servidor CentOS" />
+                <div class="overlay"><i class="fas fa-external-link-alt"></i></div>
+              </div>
+              <div class="project-info">
+                <h4>Servidor Empresarial en CentOS</h4>
+                <p>Infraestructura, Seguridad y Automatización</p>
               </div>
             </div>
           </div>
@@ -367,326 +674,199 @@
       <div id="modal1" class="modal">
         <div class="modal-content new-modal-style">
           <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
-
           <div class="modal-header">
-            <h2>
-              Sistema experto para la prevención de Burnout en los internos de
-              primer año
-            </h2>
+            <h2>Jawitas Mi Chulumani - Sistema de Gestión Integral y Asistencia Gerencial</h2>
             <div class="modal-badges">
-              <span class="badge role-badge">AI Developer</span>
-              <span class="badge loc-badge"
-                ><i class="fas fa-map-marker-alt"></i> La Paz - Bolivia</span
-              >
+              <span class="badge role-badge">Estado: En desarrollo</span>
+              <span class="badge loc-badge">Tiempo: 7 meses (en progreso)</span>
             </div>
           </div>
-
-          <p class="modal-intro">
-            Desarrollo de un sistema experto diseñado para evaluar, diagnosticar
-            y recomendar acciones preventivas contra el síndrome de Burnout en
-            médicos internos, utilizando reglas de inferencia basadas en datos
-            reales.
-          </p>
-
+          <p class="modal-intro">Plataforma web empresarial para administración y automatización de sucursales, optimizando logística, inventarios y toma de decisiones mediante agentes autónomos coordinados.</p>
           <div class="modal-body-grid">
             <div class="modal-contributions">
               <h4 class="section-subtitle">CONTRIBUCIONES Y EXPERIENCIA</h4>
+              <p class="about-italic" style="margin-bottom: 1rem">Organización: Jawitas "Mi Chulumani" (Proyecto de Grado para Ingeniería de Sistemas).</p>
               <ul class="contribution-list">
-                <li>
-                  <i class="fas fa-arrow-right"></i>
-                  <span
-                    >Diseño de la base de conocimiento y
-                    <strong>reglas heurísticas</strong> con especialistas
-                    médicos.</span
-                  >
-                </li>
-                <li>
-                  <i class="fas fa-arrow-right"></i>
-                  <span
-                    >Desarrollo del <strong>Motor de Inferencia</strong> para
-                    calcular los niveles de riesgo de Burnout.</span
-                  >
-                </li>
-                <li>
-                  <i class="fas fa-arrow-right"></i>
-                  <span
-                    >Creación de una interfaz interactiva y amigable para
-                    facilitar los test psicológicos a los internos.</span
-                  >
-                </li>
+                <li><i class="fas fa-arrow-right"></i><span><strong>Arquitectura Multi-Agente:</strong> diseño de un grafo de ejecución asíncrono y orquestado con <strong>LangGraph</strong>.</span></li>
+                <li><i class="fas fa-arrow-right"></i><span><strong>Supervisión Conversacional:</strong> implementación de un agente conversacional supervisor que coordina agentes especialistas de <strong>Inventario</strong>, <strong>Sucursales</strong> y <strong>Finanzas</strong>, impulsado por <strong>Gemini API</strong>.</span></li>
+                <li><i class="fas fa-arrow-right"></i><span><strong>Procesamiento Inteligente:</strong> integración de <strong>RAG</strong>, <strong>ChromaDB</strong>, OCR y Speech-to-Text.</span></li>
+                <li><i class="fas fa-arrow-right"></i><span><strong>Visión de Documentos:</strong> integración de <strong>Google Cloud Vision API</strong> para extracción inteligente y análisis de documentos.</span></li>
+                <li><i class="fas fa-arrow-right"></i><span><strong>Infraestructura Descentralizada:</strong> implementación de mensajería asíncrona con <strong>RabbitMQ</strong>.</span></li>
               </ul>
             </div>
-
             <div class="modal-tech-stack">
               <h4 class="section-subtitle">STACK TECNOLÓGICO</h4>
-              <div class="tech-category">
-                <h5>Lenguajes & Lógica</h5>
-                <div class="tech-tags">
-                  <span>Python</span> <span>Prolog / Reglas</span>
-                </div>
-              </div>
-              <div class="tech-category">
-                <h5>Frontend</h5>
-                <div class="tech-tags">
-                  <span>Vue.js</span> <span>HTML/CSS</span>
-                </div>
-              </div>
+              <div class="tech-category"><h5>Herramientas</h5><div class="tech-tags"><span>Python (Django)</span><span>Vue.js</span><span>LangGraph</span><span>Gemini API</span><span>Google Cloud Vision API</span><span>ChromaDB</span><span>PostgreSQL</span><span>RabbitMQ</span><span>Docker</span></div></div>
             </div>
           </div>
-
-          <div class="modal-footer">
-            <button class="btn-text" onclick="closeModal('modal1')">
-              Cerrar
-            </button>
-            <a href="#" class="btn btn-primary"
-              >Ver Proyecto <i class="fas fa-external-link-alt"></i
-            ></a>
+          <div class="project-gallery">
+            <h4 class="section-subtitle">GALERIA DEL PROYECTO</h4>
+            <div class="project-gallery-grid">
+              <img src="./img/jawi1.png" alt="Jawitas - Vista 1" class="project-gallery-img" onclick="openImageLightbox(this.src, this.alt)" />
+              <img src="./img/jawi2.png" alt="Jawitas - Vista 2" class="project-gallery-img" onclick="openImageLightbox(this.src, this.alt)" />
+              <img src="./img/jawi3.png" alt="Jawitas - Vista 3" class="project-gallery-img" onclick="openImageLightbox(this.src, this.alt)" />
+            </div>
           </div>
+          <div class="modal-footer"><button class="btn-text" onclick="closeModal('modal1')">Cerrar</button><a href="#" class="btn btn-primary">Ver Proyecto <i class="fas fa-external-link-alt"></i></a></div>
         </div>
       </div>
 
       <div id="modal2" class="modal">
         <div class="modal-content new-modal-style">
           <span class="close-btn" onclick="closeModal('modal2')">&times;</span>
-
           <div class="modal-header">
-            <h2>
-              Sistema web para la gestión integral de sucursales para Jawitas mi
-              Chulumani
-            </h2>
+            <h2>Sistema Experto para la Predicción Temprana del Síndrome de Burnout</h2>
             <div class="modal-badges">
-              <span class="badge role-badge">Full Stack Developer</span>
-              <span class="badge loc-badge"
-                ><i class="fas fa-map-marker-alt"></i> La Paz - Bolivia</span
-              >
+              <span class="badge role-badge">Estado: Concluido</span>
+              <span class="badge loc-badge">Tiempo: 5 meses (gestión 2-2025)</span>
             </div>
           </div>
-
-          <p class="modal-intro">
-            Plataforma web centralizada y escalable construida para automatizar
-            el control de inventarios, ventas, distribución y personal a través
-            de múltiples sucursales comerciales.
-          </p>
-
+          <p class="modal-intro">Plataforma médica y psicológica para monitoreo continuo, prevención y detección oportuna del desgaste profesional en internos de medicina.</p>
           <div class="modal-body-grid">
             <div class="modal-contributions">
               <h4 class="section-subtitle">CONTRIBUCIONES Y EXPERIENCIA</h4>
+              <p class="about-italic" style="margin-bottom: 1rem">Organización: Proyecto interdisciplinario con Medicina e Ingeniería de Sistemas de UNIFRANZ.</p>
               <ul class="contribution-list">
-                <li>
-                  <i class="fas fa-arrow-right"></i>
-                  <span
-                    >Análisis y diseño de una
-                    <strong>Base de Datos Relacional</strong> para soportar
-                    múltiples sucursales concurrentes.</span
-                  >
-                </li>
-                <li>
-                  <i class="fas fa-arrow-right"></i>
-                  <span
-                    >Desarrollo completo del
-                    <strong>Módulo de Punto de Venta (POS)</strong> y control de
-                    stock en tiempo real.</span
-                  >
-                </li>
-                <li>
-                  <i class="fas fa-arrow-right"></i>
-                  <span
-                    >Implementación de <strong>seguridad con JWT</strong> y
-                    roles de usuario (Administrador, Cajero, Inventario).</span
-                  >
-                </li>
+                <li><i class="fas fa-arrow-right"></i><span><strong>Agente Conversacional de Apoyo:</strong> chatbot clínico basado en trabajo conjunto de <strong>Ollama</strong> + <strong>RAG</strong> con base vectorial en <strong>ChromaDB</strong>.</span></li>
+                <li><i class="fas fa-arrow-right"></i><span><strong>Automatización Psicológica:</strong> procesamiento de MBI, GAD-7 y PHQ-9 con alertas tempranas.</span></li>
+                <li><i class="fas fa-arrow-right"></i><span><strong>Arquitectura Híbrida y Segura:</strong> FastAPI para IA y Laravel para capa transaccional con Docker.</span></li>
               </ul>
             </div>
-
             <div class="modal-tech-stack">
               <h4 class="section-subtitle">STACK TECNOLÓGICO</h4>
-              <div class="tech-category">
-                <h5>Frontend</h5>
-                <div class="tech-tags">
-                  <span>Vue.js</span> <span>Vuetify</span>
-                </div>
-              </div>
-              <div class="tech-category">
-                <h5>Backend & Data</h5>
-                <div class="tech-tags">
-                  <span>PHP (Laravel)</span> <span>PostgreSQL</span>
-                </div>
-              </div>
+              <div class="tech-category"><h5>Herramientas</h5><div class="tech-tags"><span>Python (FastAPI)</span><span>Laravel</span><span>Vue.js 3</span><span>Ollama / Llama 3.2</span><span>RAG</span><span>ChromaDB</span><span>Docker</span></div></div>
             </div>
           </div>
-
-          <div class="modal-footer">
-            <button class="btn-text" onclick="closeModal('modal2')">
-              Cerrar
-            </button>
-            <a href="#" class="btn btn-primary"
-              >Ver Proyecto <i class="fas fa-external-link-alt"></i
-            ></a>
+          <div class="project-gallery">
+            <h4 class="section-subtitle">GALERIA DEL PROYECTO</h4>
+            <div class="project-gallery-grid">
+              <img src="./img/burnout1.jpeg" alt="Burnout - Vista 1" class="project-gallery-img" onclick="openImageLightbox(this.src, this.alt)" />
+              <img src="./img/burnout2.jpeg" alt="Burnout - Vista 2" class="project-gallery-img" onclick="openImageLightbox(this.src, this.alt)" />
+              <img src="./img/burnout3.jpeg" alt="Burnout - Vista 3" class="project-gallery-img" onclick="openImageLightbox(this.src, this.alt)" />
+            </div>
           </div>
+          <div class="modal-footer"><button class="btn-text" onclick="closeModal('modal2')">Cerrar</button><a href="#" class="btn btn-primary">Ver Proyecto <i class="fas fa-external-link-alt"></i></a></div>
         </div>
       </div>
 
       <div id="modal3" class="modal">
         <div class="modal-content new-modal-style">
           <span class="close-btn" onclick="closeModal('modal3')">&times;</span>
-
           <div class="modal-header">
-            <h2>
-              Sistema web para la búsqueda de la ruta más corta mediante
-              Haversine
-            </h2>
+            <h2>Mesa Nacional de Maternidad y Nacimiento Seguros</h2>
             <div class="modal-badges">
-              <span class="badge role-badge">Backend & Algoritmos</span>
-              <span class="badge loc-badge"
-                ><i class="fas fa-map-marker-alt"></i> La Paz - Bolivia</span
-              >
+              <span class="badge role-badge">Estado: En desarrollo</span>
+              <span class="badge loc-badge">Tiempo: 3 meses (en progreso)</span>
             </div>
           </div>
-
-          <p class="modal-intro">
-            Aplicación web enfocada en logística y geolocalización que calcula
-            eficientemente distancias y traza la ruta óptima entre múltiples
-            coordenadas geográficas utilizando trigonometría esférica.
-          </p>
-
+          <p class="modal-intro">Portal web institucional enfocado en difusión científica, noticias de salud materna y acceso a información sobre parto institucional seguro en Bolivia.</p>
           <div class="modal-body-grid">
             <div class="modal-contributions">
               <h4 class="section-subtitle">CONTRIBUCIONES Y EXPERIENCIA</h4>
+              <p class="about-italic" style="margin-bottom: 1rem">Organización: UNICEF Bolivia.</p>
               <ul class="contribution-list">
-                <li>
-                  <i class="fas fa-arrow-right"></i>
-                  <span
-                    >Implementación matemática de la
-                    <strong>Fórmula de Haversine</strong> para cálculo de
-                    distancias sobre la esfera terrestre.</span
-                  >
-                </li>
-                <li>
-                  <i class="fas fa-arrow-right"></i>
-                  <span
-                    >Integración de <strong>APIs de Mapas</strong> para
-                    renderizar rutas visualmente al usuario.</span
-                  >
-                </li>
-                <li>
-                  <i class="fas fa-arrow-right"></i>
-                  <span
-                    >Optimización de <strong>consultas espaciales</strong> en la
-                    base de datos para recuperar coordenadas rápidamente.</span
-                  >
-                </li>
+                <li><i class="fas fa-arrow-right"></i><span><strong>Modelado Arquitectural Robusto:</strong> diseño de base relacional en Django ORM para consistencia y alta disponibilidad.</span></li>
+                <li><i class="fas fa-arrow-right"></i><span><strong>Estructura Modular Escalable:</strong> arquitectura desacoplada con API Restful de Django y SPA en Vue.js.</span></li>
+                <li><i class="fas fa-arrow-right"></i><span><strong>Optimización de Contenido Institucional:</strong> publicación centralizada de información científica y médica.</span></li>
               </ul>
             </div>
-
             <div class="modal-tech-stack">
               <h4 class="section-subtitle">STACK TECNOLÓGICO</h4>
-              <div class="tech-category">
-                <h5>Frontend</h5>
-                <div class="tech-tags">
-                  <span>Next.js</span> <span>Material UI</span>
-                </div>
-              </div>
-              <div class="tech-category">
-                <h5>Backend & Data</h5>
-                <div class="tech-tags">
-                  <span>TypeScript</span> <span>Nest.js</span>
-                  <span>MySQL</span>
-                </div>
-              </div>
+              <div class="tech-category"><h5>Herramientas</h5><div class="tech-tags"><span>Python (Django)</span><span>Vue.js</span><span>Tailwind CSS</span><span>PostgreSQL</span></div></div>
             </div>
           </div>
-
-          <div class="modal-footer">
-            <button class="btn-text" onclick="closeModal('modal3')">
-              Cerrar
-            </button>
-            <a href="#" class="btn btn-primary"
-              >Ver Proyecto <i class="fas fa-external-link-alt"></i
-            ></a>
+          <div class="project-gallery">
+            <h4 class="section-subtitle">GALERIA DEL PROYECTO</h4>
+            <div class="project-gallery-grid">
+              <img src="./img/mesa1.jpeg" alt="UNICEF - Vista 1" class="project-gallery-img" onclick="openImageLightbox(this.src, this.alt)" />
+              <img src="./img/mesa2.jpeg" alt="UNICEF - Vista 2" class="project-gallery-img" onclick="openImageLightbox(this.src, this.alt)" />
+              <img src="./img/mesa3.jpeg" alt="UNICEF - Vista 3" class="project-gallery-img" onclick="openImageLightbox(this.src, this.alt)" />
+            </div>
           </div>
+          <div class="modal-footer"><button class="btn-text" onclick="closeModal('modal3')">Cerrar</button><a href="#" class="btn btn-primary">Ver Proyecto <i class="fas fa-external-link-alt"></i></a></div>
         </div>
       </div>
 
       <div id="modal4" class="modal">
         <div class="modal-content new-modal-style">
           <span class="close-btn" onclick="closeModal('modal4')">&times;</span>
-
           <div class="modal-header">
-            <h2>
-              Sistema web de predicción de clima mediante minería de datos
-            </h2>
+            <h2>Framework TQA - Automatización de Pruebas de Software</h2>
             <div class="modal-badges">
-              <span class="badge role-badge">Data Engineer</span>
-              <span class="badge loc-badge"
-                ><i class="fas fa-map-marker-alt"></i> La Paz - Bolivia</span
-              >
+              <span class="badge role-badge">Estado: Concluido</span>
+              <span class="badge loc-badge">Tiempo: 2 meses</span>
             </div>
           </div>
-
-          <p class="modal-intro">
-            Sistema predictivo que analiza grandes volúmenes de datos
-            meteorológicos históricos para identificar patrones y predecir
-            condiciones climáticas futuras utilizando algoritmos de aprendizaje
-            automático.
-          </p>
-
+          <p class="modal-intro">Suite técnica especializada en SQA para ejecución automática de pruebas y evaluación de carga y estrés sobre plataformas web.</p>
           <div class="modal-body-grid">
             <div class="modal-contributions">
               <h4 class="section-subtitle">CONTRIBUCIONES Y EXPERIENCIA</h4>
+              <p class="about-italic" style="margin-bottom: 1rem">Organización: Facultad de Ingeniería (UNIFRANZ).</p>
               <ul class="contribution-list">
-                <li>
-                  <i class="fas fa-arrow-right"></i>
-                  <span
-                    ><strong>Limpieza y preprocesamiento</strong> de datasets
-                    masivos con registros climáticos históricos.</span
-                  >
-                </li>
-                <li>
-                  <i class="fas fa-arrow-right"></i>
-                  <span
-                    >Entrenamiento y validación de
-                    <strong>modelos predictivos</strong> utilizando librerías de
-                    Inteligencia Artificial.</span
-                  >
-                </li>
-                <li>
-                  <i class="fas fa-arrow-right"></i>
-                  <span
-                    >Desarrollo de un
-                    <strong>Dashboard interactivo</strong> para la visualización
-                    de las predicciones y tendencias.</span
-                  >
-                </li>
+                <li><i class="fas fa-arrow-right"></i><span><strong>Automatización E2E:</strong> scripts con <strong>Playwright</strong> para simular comportamiento real del usuario.</span></li>
+                <li><i class="fas fa-arrow-right"></i><span><strong>Reportes Dinámicos:</strong> microservicio en Flask para generar reportes técnicos .docx con python-docx.</span></li>
+                <li><i class="fas fa-arrow-right"></i><span><strong>Pruebas No Funcionales:</strong> configuración de escenarios de estrés y concurrencia crítica.</span></li>
               </ul>
             </div>
-
             <div class="modal-tech-stack">
               <h4 class="section-subtitle">STACK TECNOLÓGICO</h4>
-              <div class="tech-category">
-                <h5>IA & Data Mining</h5>
-                <div class="tech-tags">
-                  <span>Python</span> <span>TensorFlow</span>
-                  <span>Pandas</span>
-                </div>
-              </div>
-              <div class="tech-category">
-                <h5>Backend & Data</h5>
-                <div class="tech-tags">
-                  <span>FastAPI</span> <span>SQL Server</span>
-                </div>
-              </div>
+              <div class="tech-category"><h5>Herramientas</h5><div class="tech-tags"><span>Python</span><span>Playwright</span><span>Flask</span><span>Python-Docx</span></div></div>
             </div>
           </div>
-
-          <div class="modal-footer">
-            <button class="btn-text" onclick="closeModal('modal4')">
-              Cerrar
-            </button>
-            <a href="#" class="btn btn-primary"
-              >Ver Proyecto <i class="fas fa-external-link-alt"></i
-            ></a>
+          <div class="project-gallery">
+            <h4 class="section-subtitle">GALERIA DEL PROYECTO</h4>
+            <div class="project-gallery-grid">
+              <img src="./img/tqa1.png" alt="TQA - Vista 1" class="project-gallery-img" onclick="openImageLightbox(this.src, this.alt)" />
+              <img src="./img/tqa2.png" alt="TQA - Vista 2" class="project-gallery-img" onclick="openImageLightbox(this.src, this.alt)" />
+              <img src="./img/tqa3.png" alt="TQA - Vista 3" class="project-gallery-img" onclick="openImageLightbox(this.src, this.alt)" />
+            </div>
           </div>
+          <div class="modal-footer"><button class="btn-text" onclick="closeModal('modal4')">Cerrar</button><a href="#" class="btn btn-primary">Ver Proyecto <i class="fas fa-external-link-alt"></i></a></div>
         </div>
+      </div>
+
+      <div id="modal5" class="modal">
+        <div class="modal-content new-modal-style">
+          <span class="close-btn" onclick="closeModal('modal5')">&times;</span>
+          <div class="modal-header">
+            <h2>Servidor de Infraestructura Empresarial en CentOS</h2>
+            <div class="modal-badges">
+              <span class="badge role-badge">Estado: Concluido</span>
+              <span class="badge loc-badge">Tiempo: 1 mes</span>
+            </div>
+          </div>
+          <p class="modal-intro">Implementación, seguridad y puesta en marcha de un servidor Linux en CentOS para simular infraestructura empresarial de red y servicios web.</p>
+          <div class="modal-body-grid">
+            <div class="modal-contributions">
+              <h4 class="section-subtitle">CONTRIBUCIONES Y EXPERIENCIA</h4>
+              <p class="about-italic" style="margin-bottom: 1rem">Organización: Facultad de Ingeniería (Laboratorio de Sistemas de Redes).</p>
+              <ul class="contribution-list">
+                <li><i class="fas fa-arrow-right"></i><span><strong>Hardening del Sistema:</strong> IPTables, llaves SSH seguras y políticas estrictas de acceso.</span></li>
+                <li><i class="fas fa-arrow-right"></i><span><strong>Automatización de Red:</strong> scripts Bash para respaldos, auditoría de logs y gestión de almacenamiento.</span></li>
+                <li><i class="fas fa-arrow-right"></i><span><strong>Servicios Empresariales:</strong> despliegue de Apache/Nginx y transferencia segura con SFTP.</span></li>
+              </ul>
+            </div>
+            <div class="modal-tech-stack">
+              <h4 class="section-subtitle">STACK TECNOLÓGICO</h4>
+              <div class="tech-category"><h5>Herramientas</h5><div class="tech-tags"><span>CentOS</span><span>Bash Scripting</span><span>Apache/Nginx</span><span>SSH</span><span>IPTables</span><span>SFTP</span></div></div>
+            </div>
+          </div>
+          <div class="project-gallery">
+            <h4 class="section-subtitle">GALERIA DEL PROYECTO</h4>
+            <div class="project-gallery-grid">
+              <img src="./img/redes1.jpeg" alt="Servidor CentOS - Vista 1" class="project-gallery-img" onclick="openImageLightbox(this.src, this.alt)" />
+              <img src="./img/redes2.jpeg" alt="Servidor CentOS - Vista 2" class="project-gallery-img" onclick="openImageLightbox(this.src, this.alt)" />
+              <img src="./img/redes3.jpeg" alt="Servidor CentOS - Vista 3" class="project-gallery-img" onclick="openImageLightbox(this.src, this.alt)" />
+            </div>
+          </div>
+          <div class="modal-footer"><button class="btn-text" onclick="closeModal('modal5')">Cerrar</button><a href="#" class="btn btn-primary">Ver Proyecto <i class="fas fa-external-link-alt"></i></a></div>
+        </div>
+      </div>
+
+      <div id="imageLightbox" class="image-lightbox" aria-hidden="true">
+        <button type="button" class="image-lightbox-close" onclick="closeImageLightbox()">&times;</button>
+        <img id="lightboxImage" src="" alt="Vista ampliada del proyecto" class="image-lightbox-img" />
+        <p id="lightboxCaption" class="image-lightbox-caption"></p>
       </div>
 
       <section id="contacto" class="section contact-section">
@@ -708,12 +888,7 @@
               </div>
             </div>
 
-            <form
-              class="contact-form"
-              action="mailto:tu_correo@email.com"
-              method="post"
-              enctype="text/plain"
-            >
+            <form class="contact-form" id="contactForm">
               <input
                 type="text"
                 name="nombre"
@@ -735,6 +910,7 @@
               <button type="submit" class="btn btn-primary">
                 Enviar Mensaje
               </button>
+              <p id="contactStatus" class="contact-status" role="status" aria-live="polite"></p>
             </form>
           </div>
         </div>

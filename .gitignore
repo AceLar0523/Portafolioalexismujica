@@ -1,0 +1,21 @@
+# Dependencias
+node_modules/
+
+# Backend local (no compatible con GitHub Pages)
+server.js
+
+# Credenciales
+.env
+.env.*
+!.env.example
+
+# Recursos locales no versionados
+img/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos del sistema
+.DS_Store
