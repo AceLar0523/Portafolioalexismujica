@@ -276,20 +276,22 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             try {
+                const formPayload = new URLSearchParams({
+                    name: payload.nombre,
+                    email: payload.email,
+                    message: payload.mensaje,
+                    _subject: 'Nuevo mensaje desde tu portafolio',
+                    _captcha: 'false',
+                    _template: 'table',
+                });
+
                 const response = await fetch('https://formsubmit.co/ajax/kevinalexis01mujica@gmail.com', {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/json',
+                        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
                         Accept: 'application/json',
                     },
-                    body: JSON.stringify({
-                        name: payload.nombre,
-                        email: payload.email,
-                        message: payload.mensaje,
-                        _subject: 'Nuevo mensaje desde tu portafolio',
-                        _captcha: 'false',
-                        _template: 'table',
-                    }),
+                    body: formPayload.toString(),
                 });
 
                 const data = await response.json().catch(() => ({}));
