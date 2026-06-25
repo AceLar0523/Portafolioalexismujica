@@ -56,6 +56,28 @@ function closeImageLightbox() {
     image.src = '';
 }
 
+function showToast(type, title, message) {
+    const container = document.getElementById('toastContainer');
+    if (!container) {
+        return;
+    }
+
+    const toast = document.createElement('div');
+    toast.className = `toast ${type}`;
+    toast.innerHTML = `
+        <span class="toast-title">${title}</span>
+        <span class="toast-message">${message}</span>
+    `;
+
+    container.appendChild(toast);
+
+    window.setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateY(-6px)';
+        window.setTimeout(() => toast.remove(), 240);
+    }, 4200);
+}
+
 window.onclick = function(event) {
     if (event.target.classList.contains('modal')) {
         if (event.target.classList.contains('skill-modal')) {
@@ -244,6 +266,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!payload.nombre || !payload.email || !payload.mensaje) {
                 contactStatus.textContent = 'Completa todos los campos antes de enviar.';
                 contactStatus.className = 'contact-status error';
+                showToast('error', 'Formulario incompleto', 'Debes completar nombre, correo y mensaje antes de enviar.');
                 return;
             }
 
@@ -253,14 +276,20 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             try {
-                const apiUrl = window.location.protocol === 'file:'
-                    ? 'http://localhost:3000/api/contact'
-                    : '/api/contact';
-
-                const response = await fetch(apiUrl, {
+                const response = await fetch('https://formsubmit.co/ajax/kevinalexis01mujica@gmail.com', {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload),
+                    headers: {
+                        'Content-Type': 'application/json',
+                        Accept: 'application/json',
+                    },
+                    body: JSON.stringify({
+                        name: payload.nombre,
+                        email: payload.email,
+                        message: payload.mensaje,
+                        _subject: 'Nuevo mensaje desde tu portafolio',
+                        _captcha: 'false',
+                        _template: 'table',
+                    }),
                 });
 
                 const data = await response.json().catch(() => ({}));
@@ -271,10 +300,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 contactStatus.textContent = 'Mensaje enviado correctamente. Te responderé pronto.';
                 contactStatus.className = 'contact-status success';
+                showToast('success', 'Mensaje enviado', 'Tu mensaje fue enviado correctamente. Revisaré el correo y te responderé pronto.');
                 contactForm.reset();
             } catch (error) {
-                contactStatus.textContent = error.message || 'Error al enviar el mensaje. Intenta nuevamente.';
+                contactStatus.textContent = 'No fue posible enviar el mensaje en este momento.';
                 contactStatus.className = 'contact-status error';
+                showToast(
+                    'error',
+                    'No se pudo enviar',
+                    'Si es tu primer envío con FormSubmit, revisa tu correo y confirma la activación del formulario. Luego vuelve a intentarlo.'
+                );
             } finally {
                 if (submitButton) {
                     submitButton.disabled = false;
